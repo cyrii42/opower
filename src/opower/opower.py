@@ -49,7 +49,8 @@ class AggregateType(Enum):
     BILL = "bill"
     DAY = "day"
     HOUR = "hour"
-    # HALF_HOUR and QUARTER_HOUR are intentionally omitted.
+    QUARTER_HOUR = "quarter_hour"
+    # HALF_HOUR and QUARTER_HOUR are intentionally omitted.  *** re-added by ZMV ***
     # Home Assistant only has hourly data in the energy dashboard and
     # some utilities (e.g. PG&E) claim QUARTER_HOUR but they only provide HOUR.
 
@@ -85,6 +86,7 @@ SUPPORTED_AGGREGATE_TYPES = {
         AggregateType.BILL,
         AggregateType.DAY,
         AggregateType.HOUR,
+        AggregateType.QUARTER_HOUR  ### added by ZMV 10/17/23
     ],
 }
 
