@@ -2,26 +2,20 @@
 
 import asyncio
 from datetime import datetime, timedelta
-import os
 from typing import Optional
 
 import aiohttp
-from dotenv import load_dotenv
 import pandas as pd
 
 from opower import AggregateType, MeterType, Opower
-
-load_dotenv()
-CONED_USERNAME = os.getenv("CONED_USERNAME")
-CONED_PASSWORD = os.getenv("CONED_PASSWORD")
-CONED_MFA_SECRET = os.getenv("CONED_MFA_SECRET")
+import zmv_const as const
 
 
 async def _main() -> None:
-    utility = "coned"
-    username = CONED_USERNAME
-    password = CONED_PASSWORD
-    mfa_secret = CONED_MFA_SECRET
+    utility = const.CONED_UTILITY_NAME
+    username = const.CONED_USERNAME
+    password = const.CONED_PASSWORD
+    mfa_secret = const.CONED_MFA_SECRET
     start_date = (datetime.now() - timedelta(days=14))
     end_date = datetime.now()
 
