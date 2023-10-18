@@ -1,11 +1,7 @@
 """Demo usage of Opower library."""
 
-import argparse
 import asyncio
 from datetime import datetime, timedelta
-from enum import Enum
-from getpass import getpass
-import logging
 import os
 from typing import Optional
 
@@ -13,53 +9,20 @@ import aiohttp
 from dotenv import load_dotenv
 import pandas as pd
 
-from opower import AggregateType, MeterType, Opower, ReadResolution
+from opower import AggregateType, MeterType, Opower
 
 load_dotenv()
-UTILITY = "coned"
 CONED_USERNAME = os.getenv("CONED_USERNAME")
 CONED_PASSWORD = os.getenv("CONED_PASSWORD")
 CONED_MFA_SECRET = os.getenv("CONED_MFA_SECRET")
 
 
 async def _main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--aggregate_type",
-        help="How to aggregate historical data. Defaults to day",
-        choices=list(AggregateType),
-        type=AggregateType,
-        default=AggregateType.HOUR,   ## changed from "DAY"
-    )
-    parser.add_argument(
-        "--start_date",
-        help="Start datetime for historical data. Defaults to 14 days ago",
-        type=lambda s: datetime.fromisoformat(s),
-        default=datetime.now() - timedelta(days=5),    ### changed from 7
-    )
-    parser.add_argument(
-        "--end_date",
-        help="end datetime for historical data. Defaults to now",
-        type=lambda s: datetime.fromisoformat(s),
-        default=datetime.now(),
-    )
-    parser.add_argument(
-        "--usage_only",
-        help="If true will output usage only, not cost",
-        action="store_true",
-    )
-    parser.add_argument(
-        "-v", "--verbose", help="enable verbose logging", action="store_true"
-    )
-    args = parser.parse_args()
-
-    logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO)
-
-    utility = UTILITY
+    utility = "coned"
     username = CONED_USERNAME
     password = CONED_PASSWORD
     mfa_secret = CONED_MFA_SECRET
-    start_date = datetime.now() - timedelta(days=14)
+    start_date = (datetime.now() - timedelta(days=14))
     end_date = datetime.now()
 
     async with aiohttp.ClientSession() as session:
