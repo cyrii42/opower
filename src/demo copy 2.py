@@ -16,7 +16,7 @@ async def _main() -> None:
     username = const.CONED_USERNAME
     password = const.CONED_PASSWORD
     mfa_secret = const.CONED_MFA_SECRET
-    start_date = (datetime.now() - timedelta(days=14))
+    start_date = (datetime.now() - timedelta(days=7))
     end_date = datetime.now()
 
     async with aiohttp.ClientSession() as session:
@@ -26,7 +26,7 @@ async def _main() -> None:
         await opower.async_login()
         for account in await opower.async_get_accounts():
             if account.meter_type == MeterType.ELEC:
-                aggregate_type = AggregateType.QUARTER_HOUR
+                aggregate_type = AggregateType.DAY
             elif account.meter_type == MeterType.GAS:
                 aggregate_type = AggregateType.HOUR
             print(
@@ -50,6 +50,7 @@ async def _main() -> None:
             df = pd.DataFrame(usage_data)
             df['type'] = account.meter_type
             print(df)
+            print(df.dtypes)
             # print(
             #     "start_time\tend_time\tconsumption"
             #     "\tstart_minus_prev_end\tend_minus_prev_end"
