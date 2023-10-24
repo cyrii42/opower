@@ -91,7 +91,7 @@ def main() -> None:
 
     # ############# OPTION 1:  Raw number of days
     # # # Query OPower
-    NUM_DAYS = 2    #### hourly data probably doesn't go back further than 30 days
+    NUM_DAYS = 7    #### hourly data probably doesn't go back further than 30 days
     df_opower = asyncio.run(opower.get_opower_electric_data(NUM_DAYS))
     
     # # # Query InfluxDB
@@ -119,17 +119,17 @@ def main() -> None:
     # df_filtered = df_filter_electric(df_opower, df_influx)
     df_filtered = df_filter_test(df_opower, df_influx)
 
-""" PROBLEM STILL APPEARS TO BE THAT THIS ISN'T OVERWRITNG EXISTING DATA IN INFLUXDB"""
+############## PROBLEM STILL APPEARS TO BE THAT THIS ISN'T OVERWRITNG EXISTING DATA IN INFLUXDB
 
 
 
     # If there's new data, write it to InfluxDB
-    # if df_filtered.shape[0] > 0:
-    #     influx_write_electric(df_filtered)
-    #     print(df_filtered.to_string())
-    #     print(f"Added {df_filtered.shape[0]} new entries to InfluxDB.")
-    # else:
-    #     print("No new entries!")
+    if df_filtered.shape[0] > 0:
+        influx_write_electric(df_filtered)
+        print(df_filtered.to_string())
+        print(f"Added {df_filtered.shape[0]} new entries to InfluxDB.")
+    else:
+        print("No new entries!")
 
 
     # # Prep OPower dataframe for export to InfluxDB & write to InfluxDB
