@@ -94,7 +94,6 @@ def main() -> None:
     NUM_DAYS = 7    #### hourly data probably doesn't go back further than 30 days
     df_opower = asyncio.run(opower.get_opower_electric_data(NUM_DAYS))
     print(df_opower)
-    df_opower.to_csv('asdf.csv')
     
     # # # # Query InfluxDB
     # range_start_time_str = get_range_start_str(NUM_DAYS)
