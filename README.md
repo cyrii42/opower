@@ -2,8 +2,16 @@
 
 A Python library for getting historical and forecasted usage/cost from utilities that use opower.com such as PG&amp;E.
 
-Supported utilities:
+Supported utilities (in alphabetical order):
 
+- American Electric Power (AEP) subsidiaries
+  - AEP Ohio
+  - AEP Texas
+  - Appalachian Power
+  - Indiana Michigan Power
+  - Kentucky Power
+  - Public Service Company of Oklahoma (PSO)
+  - Southwestern Electric Power Company (SWEPCO)
 - Consolidated Edison (ConEd)
   - Orange & Rockland Utilities (ORU)
 - Enmax Energy
@@ -18,6 +26,7 @@ Supported utilities:
 - Pacific Gas & Electric (PG&E)
 - Portland General Electric (PGE)
 - Puget Sound Energy (PSE)
+- Seattle City Light (SCL)
 
 ## Support a new utility
 
@@ -33,7 +42,7 @@ Since this library is used by Home Assistant, see <https://www.home-assistant.io
 
 > An exception is made for the authentication phase. An integration is allowed to extract fields from forms. To make it more robust, data should not be gathered by scraping individual fields but instead scrape all fields at once.
 
-So follow that advice and try to scrape all fields at once, similar to the `_get_form_action_url_and_hidden_inputs` in pge.py.
+So follow that advice and try to scrape all fields at once, similar to the `get_form_action_url_and_hidden_inputs` in helpers.py.
 
 ## Example
 
@@ -53,8 +62,13 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install .
 
-# Run formatter, lint, and type checking
-python -m pip install isort black flake8 ruff mypy pydantic
+# Run pre-commit
+python -m pip install pre-commit
+pre-commit install
+pre-commit run --all-files
+
+# Alternative: run formatter, lint, and type checking
+python -m pip install isort black flake8 ruff mypy
 isort . ; black . ; flake8 . ; ruff . --fix ; mypy --install-types .
 
 # Run tests
