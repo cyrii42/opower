@@ -93,10 +93,12 @@ def main() -> None:
     # # # Query OPower
     NUM_DAYS = 7    #### hourly data probably doesn't go back further than 30 days
     df_opower = asyncio.run(opower.get_opower_electric_data(NUM_DAYS))
+    print(df_opower)
+    df_opower.to_csv('asdf.csv')
     
-    # # # Query InfluxDB
-    range_start_time_str = get_range_start_str(NUM_DAYS)
-    df_influx = influx_query_electric(range_start_time_str)
+    # # # # Query InfluxDB
+    # range_start_time_str = get_range_start_str(NUM_DAYS)
+    # df_influx = influx_query_electric(range_start_time_str)
 
     ############## OPTION 2: Custom datetimes
     # # Query OPower
@@ -117,19 +119,19 @@ def main() -> None:
 
     # Merge & filter DataFrames
     # df_filtered = df_filter_electric(df_opower, df_influx)
-    df_filtered = df_filter_test(df_opower, df_influx)
+    # df_filtered = df_filter_test(df_opower, df_influx)
 
 ############## PROBLEM STILL APPEARS TO BE THAT THIS ISN'T OVERWRITNG EXISTING DATA IN INFLUXDB
 
 
 
-    # If there's new data, write it to InfluxDB
-    if df_filtered.shape[0] > 0:
-        influx_write_electric(df_filtered)
-        print(df_filtered.to_string())
-        print(f"Added {df_filtered.shape[0]} new entries to InfluxDB.")
-    else:
-        print("No new entries!")
+    # # If there's new data, write it to InfluxDB
+    # if df_filtered.shape[0] > 0:
+    #     influx_write_electric(df_filtered)
+    #     print(df_filtered.to_string())
+    #     print(f"Added {df_filtered.shape[0]} new entries to InfluxDB.")
+    # else:
+    #     print("No new entries!")
 
 
     # # Prep OPower dataframe for export to InfluxDB & write to InfluxDB

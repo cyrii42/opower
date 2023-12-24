@@ -27,7 +27,7 @@ async def get_opower_electric_data(num_days: int = 7) -> pd.DataFrame:
             if account.meter_type == MeterType.GAS:
                 continue
             elif account.meter_type == MeterType.ELEC:
-                aggregate_type = AggregateType.HOUR
+                aggregate_type = AggregateType.QUARTER_HOUR
             usage_data = await opower.async_get_usage_reads(
                 account,
                 aggregate_type,
