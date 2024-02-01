@@ -7,35 +7,12 @@ import pandas as pd
 import zmv_const as const
 import zmv_opower as opower
 
-spread = Spread(const.CONED_SPREADSHEET)
-
-def get_last_datetime_from_gsheet() -> pd.DataFrame:
+def get_last_datetime_from_gsheet(spread: Spread) -> datetime:
     spread.open_sheet('Electric usage')
     df = spread.sheet_to_df(index=None)
-    last_existing_row_start_date_split_str = (df.iloc[-1]['Date']).split(sep='/')
-    start_date_str = (f"{last_existing_row_start_date_split_str[2].zfill(2)}-" + 
-                f"{last_existing_row_start_date_split_str[0].zfill(2)}-" + 
-                f"{last_existing_row_start_date_split_str[1].zfill(2)}")
-    start_time_str = df.iloc[-1]['Start']
-    # last_existing_row_date = date.fromisoformat(start_date_str)
-    last_existing_row_datetime = datetime.fromisoformat(start_date_str + "T" + start_time_str).astimezone(const.EASTERN_TIME)
-    return last_existing_row_datetime
-    # days_to_pull = int((date.today() - last_existing_row_date).total_seconds() // 86400)    
-    # return days_to_pull
-
-    # df = spread.sheet_to_df(index=None)
-
-    # last_existing_row_start_date_str = df.iloc[-1]['Date']
-    # last_existing_row_start_date_split_str = last_existing_row_start_date_str.split(sep='/')
-    # last_existing_row_start_time_str = df.iloc[-1]['Start']
-    # last_existing_row_datetime_str = f"{last_existing_row_start_date_split_str[2].zfill(2)}-{last_existing_row_start_date_split_str[0].zfill(2)}-{last_existing_row_start_date_split_str[1].zfill(2)}T{last_existing_row_start_time_str}"
-    # last_existing_row_start_time_dt = datetime.fromisoformat(last_existing_row_datetime_str).replace(tzinfo=const.EASTERN_TIME)
-
-    # today = date.today()
-    # today_at_midnight = datetime(today.year, today.month, today.day, hour=0, minute=0, second=0, tzinfo=const.EASTERN_TIME) 
-    # days_to_pull = int(((datetime.now(tz=const.EASTERN_TIME) - last_existing_row_start_time_dt).total_seconds()) // 86400)
-    
-    # return days_to_pull
+    df['dt_start_str'] = df['Date'] + ' ' + df['Start']
+    df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+    return df.iloc[-1]['dt_start']
 
 
 def process_df_opower_for_gsheet(df_opower: pd.DataFrame) -> pd.DataFrame:
@@ -53,7 +30,7 @@ def process_df_opower_for_gsheet(df_opower: pd.DataFrame) -> pd.DataFrame:
     return df_opower
 
 
-def write_to_google_sheet(df_opower: pd.DataFrame) -> None:
+def write_to_google_sheet(spread: Spread, df_opower: pd.DataFrame) -> None:
     spread.open_sheet('Electric usage')
 
     last_existing_row = spread.get_sheet_dims()[0]
@@ -69,13 +46,15 @@ def write_to_google_sheet(df_opower: pd.DataFrame) -> None:
 
 
 def main() -> None:
-    last_datetime_from_gsheet = get_last_datetime_from_gsheet()
+    spread = Spread(const.CONED_SPREADSHEET)
+    
+    last_datetime_from_gsheet = get_last_datetime_from_gsheet(spread)
     num_days = int((date.today() - datetime.date(last_datetime_from_gsheet)).total_seconds() // 86400)    
 
     df_opower = asyncio.run(opower.get_opower_electric_data(num_days))
 
     df_opower = df_opower.drop(df_opower.loc[df_opower['start_time'] <= last_datetime_from_gsheet].index)
-    write_to_google_sheet(df_opower)
+    write_to_google_sheet(spread, df_opower)
     
 
 if __name__ == "__main__":
