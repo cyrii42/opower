@@ -3,8 +3,8 @@
 
 from gspread_pandas import Spread
 
-from zmv_const import CONED_SPREADSHEET  # , EASTERN_TIME
-from zmv_opower_gsheets import ElectricityUsage
+# from zmv_const import CONED_SPREADSHEET  # , EASTERN_TIME
+from zmv_opower_gsheets import ConEdUsage
 
 # import pandas as pd
 
@@ -48,8 +48,7 @@ from zmv_opower_gsheets import ElectricityUsage
 
 
 def main() -> None:
-    spread = Spread(CONED_SPREADSHEET)
-    usage = ElectricityUsage(spread)
+    usage = ConEdUsage()
 
     usage.pull_new_data_from_opower()
     

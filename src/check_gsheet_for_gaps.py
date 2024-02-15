@@ -1,14 +1,14 @@
-import asyncio
-from datetime import datetime, timedelta
-import time
-from pprint import pprint
+# import asyncio
+# from datetime import datetime, timedelta
+# import time
+# from pprint import pprint
 
 from gspread_pandas import Spread
-import pandas as pd
+# import pandas as pd
 
-from zmv_const import CONED_SPREADSHEET
-import zmv_opower as opower
-from zmv_opower_gsheets import ElectricityUsage
+# from zmv_const import CONED_SPREADSHEET
+# import zmv_opower as opower
+from zmv_opower_gsheets import ConEdUsage
 
 # WEEKS_TO_CHECK = 4
 
@@ -122,9 +122,7 @@ from zmv_opower_gsheets import ElectricityUsage
 
 
 def main() -> None:
-
-    spread = Spread(CONED_SPREADSHEET)
-    usage = ElectricityUsage(spread)
+    usage = ConEdUsage()
 
     usage.check_gsheet_for_gaps()
 

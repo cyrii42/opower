@@ -4,8 +4,8 @@ import time
 
 from gspread import Cell
 from gspread.utils import ValueInputOption
+from gspread_formatting import CellFormat, Color, batch_updater
 from gspread_pandas import Spread
-from gspread_formatting import batch_updater, CellFormat, Color
 import pandas as pd
 from pandas.api.types import is_datetime64_any_dtype
 
@@ -17,30 +17,33 @@ USAGE_WORKSHEET = "Electric Usage"
 BILLS_WORKSHEET = "Electric Bills"
 
 
-class ElectricityUsage():
+class ConEdUsage():
     
-    def __init__(self, spread: Spread):
-        self.spread = spread
+    def __init__(self, spreadsheet_id: str = CONED_SPREADSHEET):
+        self.spread = Spread(spreadsheet_id)
         self.df_usage = None
         self.df_bills = None
 
-
-    def ingest_worksheets(self) -> None:
+    def ingest_usage_worksheet(self) -> None:
         self.df_usage = self.spread.sheet_to_df(sheet=USAGE_WORKSHEET, index=None)
+
+    def ingest_bills_worksheet(self) -> None:
         self.df_bills = self.spread.sheet_to_df(sheet=BILLS_WORKSHEET, index=None).astype({
             'START DATE': 'datetime64[ns, America/New_York]',
             'END DATE': 'datetime64[ns, America/New_York]',
         }).drop(columns=['NOTES', ''])
 
+    def ingest_worksheets(self) -> None:
+        self.ingest_usage_worksheet()
+        self.ingest_bills_worksheet()
 
     def get_last_datetime_from_gsheet(self) -> pd.Timestamp:
         if self.df_usage is None:
-            self.ingest_worksheets()
+            self.ingest_usage_worksheet()
         df = self.df_usage            
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
         df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
         return df.iloc[-1]['dt_start']
-
 
     def pull_new_data_from_opower(self) -> None:
         last_datetime_from_gsheet = self.get_last_datetime_from_gsheet()
@@ -56,10 +59,9 @@ class ElectricityUsage():
         else:
             print("No new Con Edison data.")
 
-
     def append_new_rows_to_gsheet(self, input_df: pd.DataFrame) -> None:
         if self.df_usage is None:
-            self.ingest_worksheets()
+            self.ingest_usage_worksheet()
         last_existing_row = self.df_usage.shape[0] + 1
         starting_row = last_existing_row + 1
 
@@ -67,10 +69,9 @@ class ElectricityUsage():
         self.spread.df_to_sheet(output_df, sheet=USAGE_WORKSHEET, index=False, headers=False, start=(starting_row, 1))
         print(output_df)
 
-
     def check_gsheet_for_gaps(self) -> None:
         if self.df_usage is None:
-            self.ingest_worksheets()
+            self.ingest_usage_worksheet()
         df = self.df_usage 
 
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
@@ -102,7 +103,6 @@ class ElectricityUsage():
         else:
             print("No gaps!")
 
-
     @staticmethod
     def pull_gaps_from_opower(input_df: pd.DataFrame) -> pd.DataFrame:
         if input_df.shape[0] == 1:
@@ -127,19 +127,17 @@ class ElectricityUsage():
     
         return df_opower
 
-    
     def process_df_opower_for_appending_to_gsheet(self, df_opower: pd.DataFrame) -> pd.DataFrame:
-        if not is_datetime64_any_dtype(df_opower['start_time'].dtype):
+        if not isinstance(df_opower['start_time'].dtype, pd.DatetimeTZDtype):
             df_opower['start_time'] = df_opower['start_time'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
             
-        if not is_datetime64_any_dtype(df_opower['end_time'].dtype):
+        if not isinstance(df_opower['end_time'].dtype, pd.DatetimeTZDtype):
             df_opower['end_time'] = df_opower['end_time'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
         
         df_opower['Type'] = 'Electric usage'
         df_opower['Date'] = [x.tz_convert(tz='America/New_York').strftime('%m/%d/%Y') for x in df_opower['start_time']]
         df_opower['Start'] = [x.tz_convert(tz='America/New_York').strftime('%H:%M') for x in df_opower['start_time']]
         df_opower['End'] = [x.tz_convert(tz='America/New_York').strftime('%H:%M') for x in df_opower['end_time']]
-        df_opower['Unit'] = 'kWh'
         df_opower['Month'] = [x.tz_convert(tz='America/New_York').strftime('%b %Y') for x in df_opower['start_time']]
         df_opower['Price/kWh'] = [self.lookup_monthly_price_per_kWh(ts) for ts in df_opower['start_time']] # [f"=VLOOKUP(B{x + starting_row},'Electric Bills'!$B:$J,8)" for x in df_opower.index]
         df_opower['Cost/15min'] = [self.get_15min_cost_column(x, y) for x, y in zip(df_opower['consumption'].tolist(), df_opower['Price/kWh'].tolist())] # [f"=E{x + starting_row}*H{x + starting_row}" for x in df_opower.index]
@@ -148,16 +146,15 @@ class ElectricityUsage():
 
         # Rename "consumption" column & change the column order
         df_opower = df_opower.rename(columns={'consumption': 'Usage'})
-        df_opower = df_opower.reindex(columns=['Type', 'Date', 'Start', 'End', 'Usage', 'Unit', 'Month', 'Price/kWh', 'Cost/15min', 'Summer?', 'Period'])
+        df_opower = df_opower.reindex(columns=['Type', 'Date', 'Start', 'End', 'Usage', 'Month', 'Price/kWh', 'Cost/15min', 'Summer?', 'Period'])
 
         return df_opower
 
-
-    def sort_gsheet_by_date(self, df: pd.DataFrame = None) -> None:
-        if df is None:
-            if self.df_usage is None:
-                self.ingest_worksheets()
-            df = self.df_usage
+    def sort_gsheet_by_date(self) -> None:
+        if self.df_usage is None:
+            self.ingest_usage_worksheet()
+            
+        df = self.df_usage
         
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
         df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
@@ -176,27 +173,22 @@ class ElectricityUsage():
         else:
             print("\nUnable to fill gap using Con Edison data.  Exiting now.")
 
-
     def lookup_monthly_price_per_kWh(self, ts: pd.Timestamp) -> str:
         ''' Using the "Electric Bills" worksheet, looks up the per-kWh price for a given `pd.Timestamp`.
 
         Previous Excel formula was:  `=VLOOKUP(B{row_num},'Electric Bills'!$B:$J,8)`'''
         
-        # filtered_df = self.df_bills[self.df_bills['MONTH'] == ts.strftime('%b %Y')].reset_index()
+        if self.df_bills is None:
+            self.ingest_bills_worksheet()
+
         filtered_df = self.df_bills[(self.df_bills['START DATE'] <= ts) & 
                                     (self.df_bills['END DATE'] >= ts)].reset_index()
-        
         if filtered_df.shape[0] > 0:
             return filtered_df.loc[0, '$/kWh']
         else:
-            # year = ts.year - 1 if ts.month == 1 else ts.year
-            # last_month = 12 if ts.month == 1 else ts.month - 1
-            # new_ts = pd.Timestamp(year=year, month=last_month, day=1, tz='America/New_York')
-
             new_ts = ts - timedelta(weeks=2)
             return self.lookup_monthly_price_per_kWh(new_ts)
 
-        
     @staticmethod
     def get_period_column(ts: pd.Timestamp) -> str:
         ''' Determines the Con Edison time-of-use period for a given `pd.Timestamp`. 
@@ -223,7 +215,6 @@ class ElectricityUsage():
         else:
             return 'Non-Peak'
 
-
     @staticmethod
     def get_15min_cost_column(kWh: float, price_str: str) -> str:
         ''' Calculates the price of electricity for a given time period.
@@ -239,38 +230,51 @@ class ElectricityUsage():
             except TypeError:
                 return 'TypeError'
 
-
     def reformat_electric_usage_worksheet(self) -> None:
         worksheet = self.spread.find_sheet(USAGE_WORKSHEET)
+        
         with batch_updater(worksheet.spreadsheet) as batch:
-            batch.format_cell_range(worksheet, 'A:K', CellFormat(
-                backgroundColor=Color(1,1,1),   
-                textFormat={"bold": False}
-            ))
-            batch.format_cell_range(worksheet, 'A1:K1', CellFormat(
-                backgroundColor=Color(0.85, 0.85, 0.85),
-                horizontalAlignment='CENTER',
-                textFormat={"bold": True}
-            ))
-            batch.format_cell_range(worksheet, 'F:G', CellFormat(
-                horizontalAlignment='CENTER'
-            ))
-            batch.format_cell_range(worksheet, 'J:K', CellFormat(
-                horizontalAlignment='CENTER'
-            ))
-            batch.format_cell_range(worksheet, 'J:K', CellFormat(
-                numberFormat={"type": "CURRENCY"}
-            ))
-            batch.set_column_width(worksheet, 'B', 75)
-            batch.set_column_width(worksheet, 'C:F', 70)
-            batch.set_column_width(worksheet, 'G:J', 85)
-            batch.set_column_width(worksheet, 'K', 100)
+            batch.format_cell_range(worksheet, 'A:J', 
+                                    CellFormat(
+                                        backgroundColor=Color(1,1,1),   
+                                        textFormat={'bold': False}))
+            
+            batch.format_cell_range(worksheet, 'A1:J1', 
+                                    CellFormat(
+                                        backgroundColor=Color(0.85, 0.85, 0.85),
+                                        horizontalAlignment='CENTER',
+                                        textFormat={'bold': True}))
+            
+            batch.format_cell_range(worksheet, 'I:J', 
+                                    CellFormat(
+                                        horizontalAlignment='CENTER'))
 
+            batch.format_cell_range(worksheet, 'G', 
+                                    CellFormat(
+                                        numberFormat={'type': 'CURRENCY',
+                                                      'pattern': '$#,##0.00#'}))
+            
+            batch.format_cell_range(worksheet, 'H',
+                                    CellFormat(
+                                        numberFormat={'type': 'CURRENCY',
+                                                      'pattern': '$#,##0.00'}))
+            
+            batch.format_cell_range(worksheet, 'E', 
+                                    CellFormat(
+                                        numberFormat={'type': 'NUMBER',
+                                                      'pattern': '#,##0.00#\" kWh\"'}))
+
+            batch.set_column_width(worksheet, 'B', 75)
+            batch.set_column_width(worksheet, 'C:D', 60)
+            batch.set_column_width(worksheet, 'E', 90)
+            batch.set_column_width(worksheet, 'F:I', 85)
+            batch.set_column_width(worksheet, 'J', 100)
 
     def reset_electric_usage_worksheet(self) -> None:
         if self.df_usage is None:
-            self.ingest_worksheets()
+            self.ingest_usage_worksheet()
         df = self.df_usage
+        df['Usage'] = df['Usage'].str.rstrip(' kWh')
         df = df.astype({'Usage': 'float64'})
 
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
@@ -283,7 +287,8 @@ class ElectricityUsage():
 
         df = df.sort_values(by=['dt_start']).drop_duplicates(subset=['dt_start'], ignore_index=True)
         df = df.drop(columns=['dt_start', 'dt_start_str'])
-        df = df.reindex(columns=['Type', 'Date', 'Start', 'End', 'Usage', 'Unit', 'Month', 'Price/kWh', 'Cost/15min', 'Summer?', 'Period'])
+        df = df.reindex(columns=['Type', 'Date', 'Start', 'End', 'Usage', 'Month', 
+                                 'Price/kWh', 'Cost/15min', 'Summer?', 'Period']) # 'Unit
 
         if df.shape[0] > 0:
             self.spread.open_sheet(USAGE_WORKSHEET)
@@ -296,34 +301,81 @@ class ElectricityUsage():
         else:
             print("\nUnable to fill gap using Con Edison data.  Exiting now.")
 
-
     def fix_sealed_invoices_worksheet(self) -> None:
+        ''' Re-populates the "Actual Total Energy Used" and "Con Ed $ per kWh" fields of the 
+        "Sealed Invoices" worksheet on Google Sheets.  
+
+        Excel formula for "Actual Total Energy Used": `=SUMIFS('Electric Usage'!E:E, 
+        'Electric Usage'!B:B,\">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})`
+
+        Excel formula for "Con Ed $ per kWh": `=AVERAGEIFS('Electric Usage'!G:G,
+        'Electric Usage'!B:B,\">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})` '''
+        
         worksheet = self.spread.find_sheet('Sealed Invoices')
 
         energy_list = [Cell(row_num, 17, 
-            f"=SUMIFS('Electric Usage'!E:E, 'Electric Usage'!B:B, \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
+            f"=SUMIFS('Electric Usage'!E:E, 'Electric Usage'!B:B,\
+            \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
                              for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
         price_list = [Cell(row_num, 25, 
-            f"=AVERAGEIFS('Electric Usage'!H:H, 'Electric Usage'!B:B, \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
+            f"=AVERAGEIFS('Electric Usage'!G:G, 'Electric Usage'!B:B,\
+            \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
                              for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
         
         combined_list = energy_list + price_list
 
         worksheet.update_cells(combined_list, ValueInputOption.user_entered)
+
+    def ingest_electric_bills_csv_from_coned(self, csv_filename: str) -> None:
+        if self.df_bills is None:
+            self.ingest_bills_worksheet()
+        last_existing_row = self.df_bills.shape[0] + 1
+        starting_row = last_existing_row + 1
+        
+        df_csv = (pd.read_csv(csv_filename, header=4)
+                    .rename(columns={'USAGE (kWh)': 'USAGE'})
+                    .drop(columns=['NOTES'])
+                    .astype({'TYPE': 'string',
+                             'START DATE': 'datetime64[ns, America/New_York]',
+                             'END DATE': 'datetime64[ns, America/New_York]',
+                             'USAGE': 'string',
+                             'COST': 'string'}))
+
+        df_csv = df_csv[df_csv['START DATE'].isin(self.df_bills['START DATE']) == False].reset_index(drop=True)
+
+        df_csv['USAGE'] = df_csv['USAGE'].str.rstrip('0').str.rstrip('.')
+        df_csv['MONTH'] = [f"=EOMONTH(B{x+starting_row},0)" for x in df_csv.index]
+        df_csv['kWh/DAY'] = [f"=D{x+starting_row}/(C{x+starting_row}-B{x+starting_row})" for x in df_csv.index]
+        df_csv['$/kWh'] = [f"=E{x+starting_row}/D{x+starting_row}" for x in df_csv.index]
+        df_csv['$/DAY'] = [f"=E{x+starting_row}/(C{x+starting_row}-B{x+starting_row})" for x in df_csv.index]
+
+        df_csv['START DATE'] = df_csv['START DATE'].dt.strftime('%-m/%d/%Y')
+        df_csv['END DATE'] = df_csv['END DATE'].dt.strftime('%-m/%d/%Y')
+        df_csv = df_csv.reindex(columns=['TYPE', 'START DATE', 'END DATE', 'USAGE', 
+                                         'COST', 'MONTH', 'kWh/DAY', '$/kWh', '$/DAY'])
+
+        print(df_csv)
+        self.spread.df_to_sheet(df_csv, sheet=BILLS_WORKSHEET, replace=False, 
+                                index=False, headers=False, start=(starting_row, 1))
         
 
 def main():  
     pass
 
-    # spread = Spread(CONED_SPREADSHEET)
-    # usage = ElectricityUsage(spread)
+    # usage = ConEdUsage()
+
+    # test_csv = 'cned_electric_billing_billing_data_Service 2_2_2021-01-16_to_2024-01-12.csv'
+    # usage.ingest_electric_bills_csv_from_coned(test_csv)
 
     # usage.reset_electric_usage_worksheet()
     
-    # usage.ingest_worksheets()
+    # usage.ingest_bills_worksheet()
     # print(usage.df_bills.info())
     # print(usage.df_bills)
     # usage.fix_sealed_invoices_worksheet()
+
+    # usage.reset_electric_usage_worksheet()
+    # usage.reformat_electric_usage_worksheet()
 
     
 if __name__ == "__main__":
