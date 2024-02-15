@@ -19,6 +19,7 @@ numpy==1.26.2
 oauthlib==3.2.2
 -e git+https://github.com/cyrii42/opower.git@2be8d856db2a46b897bf68a9e86b7e5cdd647dcb#egg=opower
 pandas==2.1.4
+pyarrow==15.0.0
 pyasn1==0.5.1
 pyasn1-modules==0.3.0
 pyotp==2.9.0
