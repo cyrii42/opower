@@ -9,7 +9,7 @@ from gspread_pandas import Spread
 import pandas as pd
 from pandas.api.types import is_datetime64_any_dtype
 
-from zmv_const import CONED_SPREADSHEET
+from zmv_const import CONED_SPREADSHEET, EASTERN_TIME
 import zmv_opower as opower
 
 WEEKS_TO_CHECK = 4
@@ -40,9 +40,9 @@ class ConEdUsage():
     def get_last_datetime_from_gsheet(self) -> pd.Timestamp:
         if self.df_usage is None:
             self.ingest_usage_worksheet()
-        df = self.df_usage            
+        df = self.df_usage.copy()
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
-        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
         return df.iloc[-1]['dt_start']
 
     def pull_new_data_from_opower(self) -> None:
@@ -75,10 +75,10 @@ class ConEdUsage():
         df = self.df_usage 
 
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
-        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
         df = df.drop(columns=['dt_start_str'])
 
-        df = df[df['dt_start'] >= pd.Timestamp.now().tz_localize(tz='America/New_York') - timedelta(weeks=WEEKS_TO_CHECK)]
+        df = df[df['dt_start'] >= pd.Timestamp.now().tz_localize(tz=EASTERN_TIME) - timedelta(weeks=WEEKS_TO_CHECK)]
 
         df['gap'] = df['dt_start'].diff()
         df['gap_start_dt'] = df['dt_start'] - df['gap'] + timedelta(minutes=15)
@@ -129,16 +129,16 @@ class ConEdUsage():
 
     def process_df_opower_for_appending_to_gsheet(self, df_opower: pd.DataFrame) -> pd.DataFrame:
         if not isinstance(df_opower['start_time'].dtype, pd.DatetimeTZDtype):
-            df_opower['start_time'] = df_opower['start_time'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+            df_opower['start_time'] = df_opower['start_time'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
             
         if not isinstance(df_opower['end_time'].dtype, pd.DatetimeTZDtype):
-            df_opower['end_time'] = df_opower['end_time'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+            df_opower['end_time'] = df_opower['end_time'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
         
         df_opower['Type'] = 'Electric usage'
-        df_opower['Date'] = [x.tz_convert(tz='America/New_York').strftime('%m/%d/%Y') for x in df_opower['start_time']]
-        df_opower['Start'] = [x.tz_convert(tz='America/New_York').strftime('%H:%M') for x in df_opower['start_time']]
-        df_opower['End'] = [x.tz_convert(tz='America/New_York').strftime('%H:%M') for x in df_opower['end_time']]
-        df_opower['Month'] = [x.tz_convert(tz='America/New_York').strftime('%b %Y') for x in df_opower['start_time']]
+        df_opower['Date'] = [x.tz_convert(tz=EASTERN_TIME).strftime('%m/%d/%Y') for x in df_opower['start_time']]
+        df_opower['Start'] = [x.tz_convert(tz=EASTERN_TIME).strftime('%H:%M') for x in df_opower['start_time']]
+        df_opower['End'] = [x.tz_convert(tz=EASTERN_TIME).strftime('%H:%M') for x in df_opower['end_time']]
+        df_opower['Month'] = [x.tz_convert(tz=EASTERN_TIME).strftime('%b %Y') for x in df_opower['start_time']]
         df_opower['Price/kWh'] = [self.lookup_monthly_price_per_kWh(ts) for ts in df_opower['start_time']] # [f"=VLOOKUP(B{x + starting_row},'Electric Bills'!$B:$J,8)" for x in df_opower.index]
         df_opower['Cost/15min'] = [self.get_15min_cost_column(x, y) for x, y in zip(df_opower['consumption'].tolist(), df_opower['Price/kWh'].tolist())] # [f"=E{x + starting_row}*H{x + starting_row}" for x in df_opower.index]
         df_opower['Summer?'] = ['Yes' if x.month in [6, 7, 8, 9] else 'No' for x in df_opower['start_time']]
@@ -157,7 +157,7 @@ class ConEdUsage():
         df = self.df_usage
         
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
-        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
 
         df = df.sort_values(by=['dt_start']).drop_duplicates(subset=['dt_start'], ignore_index=True)
         df = df.drop(columns=['dt_start', 'dt_start_str'])
@@ -262,7 +262,7 @@ class ConEdUsage():
             batch.format_cell_range(worksheet, 'E', 
                                     CellFormat(
                                         numberFormat={'type': 'NUMBER',
-                                                      'pattern': '#,##0.00#\" kWh\"'}))
+                                                      'pattern': '#,##0.000'})) # 'pattern': '#,##0.000\" kWh\"'}))
 
             batch.set_column_width(worksheet, 'B', 75)
             batch.set_column_width(worksheet, 'C:D', 60)
@@ -278,7 +278,7 @@ class ConEdUsage():
         df = df.astype({'Usage': 'float64'})
 
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
-        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tz='America/New_York'))
+        df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
         
         df['Price/kWh'] = [self.lookup_monthly_price_per_kWh(ts) for ts in df['dt_start']]
         df['Cost/15min'] = [self.get_15min_cost_column(x, y) for x, y in zip(df['Usage'].tolist(), df['Price/kWh'].tolist())] 
@@ -362,12 +362,12 @@ class ConEdUsage():
 def main():  
     pass
 
-    # usage = ConEdUsage()
+    usage = ConEdUsage()
 
     # test_csv = 'cned_electric_billing_billing_data_Service 2_2_2021-01-16_to_2024-01-12.csv'
     # usage.ingest_electric_bills_csv_from_coned(test_csv)
 
-    # usage.reset_electric_usage_worksheet()
+    usage.reset_electric_usage_worksheet()
     
     # usage.ingest_bills_worksheet()
     # print(usage.df_bills.info())
