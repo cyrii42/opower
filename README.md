@@ -28,6 +28,7 @@ Supported utilities (in alphabetical order):
 - Pacific Gas & Electric (PG&E)
 - Portland General Electric (PGE)
 - Puget Sound Energy (PSE)
+- Sacramento Municipal Utility District (SMUD)
 - Seattle City Light (SCL)
 
 ## Support a new utility
@@ -74,7 +75,7 @@ python -m pip install isort black flake8 ruff mypy
 isort . ; black . ; flake8 . ; ruff . --fix ; mypy --install-types .
 
 # Run tests
-python -m pip install pytest
+python -m pip install pytest python-dotenv
 pytest
 
 # Run demo
