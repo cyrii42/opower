@@ -129,10 +129,10 @@ class ConEdUsage():
 
     def process_df_opower_for_appending_to_gsheet(self, df_opower: pd.DataFrame) -> pd.DataFrame:
         if not isinstance(df_opower['start_time'].dtype, pd.DatetimeTZDtype):
-            df_opower['start_time'] = df_opower['start_time'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
+            df_opower['start_time'] = df_opower['start_time'].apply(lambda x: pd.Timestamp(x).tz_convert(tz=EASTERN_TIME))
             
         if not isinstance(df_opower['end_time'].dtype, pd.DatetimeTZDtype):
-            df_opower['end_time'] = df_opower['end_time'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
+            df_opower['end_time'] = df_opower['end_time'].apply(lambda x: pd.Timestamp(x).tz_convert(tz=EASTERN_TIME))
         
         df_opower['Type'] = 'Electric usage'
         df_opower['Date'] = [x.tz_convert(tz=EASTERN_TIME).strftime('%m/%d/%Y') for x in df_opower['start_time']]
