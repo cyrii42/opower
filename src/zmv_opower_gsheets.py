@@ -362,12 +362,13 @@ class ConEdUsage():
 def main():  
     pass
 
-    usage = ConEdUsage()
+    # usage = ConEdUsage()
+    # usage.reset_electric_usage_worksheet()
+
+
 
     # test_csv = 'cned_electric_billing_billing_data_Service 2_2_2021-01-16_to_2024-01-12.csv'
-    # usage.ingest_electric_bills_csv_from_coned(test_csv)
-
-    usage.reset_electric_usage_worksheet()
+    # usage.ingest_electric_bills_csv_from_coned(test_csv)   
     
     # usage.ingest_bills_worksheet()
     # print(usage.df_bills.info())
