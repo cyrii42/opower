@@ -69,7 +69,7 @@ class ConEdUsage():
         self.spread.df_to_sheet(output_df, sheet=USAGE_WORKSHEET, index=False, headers=False, start=(starting_row, 1))
         print(output_df)
 
-    def check_gsheet_for_gaps(self) -> None:
+    def find_gsheet_gaps(self) -> pd.DataFrame | None:
         if self.df_usage is None:
             self.ingest_usage_worksheet()
         df = self.df_usage 
@@ -86,6 +86,14 @@ class ConEdUsage():
         df_gaps = df[df['gap'] > timedelta(minutes=15)]
         
         if df_gaps.shape[0] > 0:
+            return df_gaps
+        else:
+            return None
+
+    def check_gsheet_for_gaps(self) -> None:
+        df_gaps = self.find_gsheet_gaps()
+
+        if df_gaps is not None:
             print(f"Found {df_gaps.shape[0]} gaps in dataset:")
             print(df_gaps)
 
