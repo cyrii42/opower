@@ -55,21 +55,23 @@ class ConEdUsage():
 
         if df_opower.shape[0] > 0:
             print(f"Found {df_opower.shape[0]} new rows of Con Edison data!  Writing to Google Sheets now...")
-            self.append_new_rows_to_gsheet(df_opower)
+            self.append_new_opower_rows_to_gsheet(df_opower)
         else:
             print("No new Con Edison data.")
 
-    def append_new_rows_to_gsheet(self, input_df: pd.DataFrame) -> None:
+    def append_new_opower_rows_to_gsheet(self, input_df: pd.DataFrame) -> None:
         if self.df_usage is None:
             self.ingest_usage_worksheet()
         last_existing_row = self.df_usage.shape[0] + 1
         starting_row = last_existing_row + 1
 
+        print(f"Appending {input_df.shape[0]:,} rows of electric-usage data to Google Sheets...")
         output_df = self.process_df_opower_for_appending_to_gsheet(input_df)
         self.spread.df_to_sheet(output_df, sheet=USAGE_WORKSHEET, index=False, headers=False, start=(starting_row, 1))
+        self.ingest_usage_worksheet()  # refresh this object's usage worksheet data before you re-sort!
         print(output_df)
 
-    def find_gsheet_gaps(self) -> pd.DataFrame | None:
+    def find_gsheet_gaps(self, weeks_to_check: int = WEEKS_TO_CHECK) -> pd.DataFrame | None:
         if self.df_usage is None:
             self.ingest_usage_worksheet()
         df = self.df_usage 
@@ -78,7 +80,7 @@ class ConEdUsage():
         df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
         df = df.drop(columns=['dt_start_str'])
 
-        df = df[df['dt_start'] >= pd.Timestamp.now().tz_localize(tz=EASTERN_TIME) - timedelta(weeks=WEEKS_TO_CHECK)]
+        df = df[df['dt_start'] >= pd.Timestamp.now().tz_localize(tz=EASTERN_TIME) - timedelta(weeks=weeks_to_check)]
 
         df['gap'] = df['dt_start'].diff()
         df['gap_start_dt'] = df['dt_start'] - df['gap'] + timedelta(minutes=15)
@@ -90,22 +92,32 @@ class ConEdUsage():
         else:
             return None
 
-    def check_gsheet_for_gaps(self) -> None:
-        df_gaps = self.find_gsheet_gaps()
+    def check_gsheet_for_gaps(self, weeks_to_check: int = WEEKS_TO_CHECK) -> None:
+        df_gaps = self.find_gsheet_gaps(weeks_to_check=weeks_to_check)
 
         if df_gaps is not None:
-            print(f"Found {df_gaps.shape[0]} gaps in dataset:")
+            print(f"\nFound {df_gaps.shape[0]} gaps:")
             print(df_gaps)
 
-            if input("Attempt to fill the gaps from Con Edison data? ") in ['Y', 'y', 'yes', 'Yes', 'YES']:
+            if input("\nAttempt to fill the gaps from Con Edison data? ") in ['Y', 'y', 'yes', 'Yes', 'YES']:
                 print("Attempting now...")
                 df_opower = self.pull_gaps_from_opower(df_gaps)
+                print(f"Found {df_opower.shape[0]:,} gaps:")
                 print(df_opower)
-                df_opower.to_csv(f"df_opower_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv")
 
-                self.append_new_rows_to_gsheet(df_opower)
+                if input("\nSave CSV file to disk? ") in ['Y', 'y', 'yes', 'Yes', 'YES']:
+                    csv_filename = f"df_opower_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv"
+                    print(f"Saving data as {csv_filename}...")
+                    df_opower.to_csv(csv_filename, index=False)
+                else:
+                    print("Oh, ok.  Nevermind.")
 
-                self.sort_gsheet_by_date()
+                if input(f"\nSave Con Edison data to Google Sheet? ") in ['Y', 'y', 'yes', 'Yes', 'YES']:
+                    print(f"Saving data to Google Sheet...")
+                    self.append_new_opower_rows_to_gsheet(df_opower)
+                    self.sort_gsheet_by_date()
+                else:
+                    print("Oh, ok.  Nevermind.")
             else:
                 print("Oh, ok.  Bye!")
         else:
@@ -163,14 +175,20 @@ class ConEdUsage():
             self.ingest_usage_worksheet()
             
         df = self.df_usage
+
+        backup_csv_filename = f"df_opower_BACKUP_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv"
+        print(f"Saving backup of Google Sheets electric-usage data as {backup_csv_filename}...")
+        df.to_csv(backup_csv_filename, index=False)
         
         df['dt_start_str'] = df['Date'] + ' ' + df['Start']
         df['dt_start'] = df['dt_start_str'].apply(lambda x: pd.Timestamp(x, tzinfo=EASTERN_TIME))
 
+        print("Sorting existing electric-usage worksheet on Google Sheets...")
         df = df.sort_values(by=['dt_start']).drop_duplicates(subset=['dt_start'], ignore_index=True)
         df = df.drop(columns=['dt_start', 'dt_start_str'])
 
         if df.shape[0] > 0:
+            print("Replacing existing Google Sheets electric-usage worksheet with new, sorted worksheet...")
             self.spread.open_sheet(USAGE_WORKSHEET)
 
             self.spread.df_to_sheet(df, replace=True, index=False, headers=True, freeze_headers=True, start='A1')
@@ -321,14 +339,12 @@ class ConEdUsage():
         
         worksheet = self.spread.find_sheet('Sealed Invoices')
 
-        energy_list = [Cell(row_num, 17, 
-            f"=SUMIFS('Electric Usage'!E:E, 'Electric Usage'!B:B,\
-            \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
-                             for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
-        price_list = [Cell(row_num, 25, 
-            f"=AVERAGEIFS('Electric Usage'!G:G, 'Electric Usage'!B:B,\
-            \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
-                             for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
+        energy_list = [Cell(row_num, 18, 
+            f"=SUMIFS('Electric Usage'!E:E, 'Electric Usage'!B:B, \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
+                for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
+        price_list = [Cell(row_num, 26, 
+            f"=AVERAGEIFS('Electric Usage'!G:G, 'Electric Usage'!B:B, \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
+                for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
         
         combined_list = energy_list + price_list
 
@@ -368,10 +384,10 @@ class ConEdUsage():
         
 
 def main():  
-    pass
+    # pass
 
-    # usage = ConEdUsage()
-    # usage.reset_electric_usage_worksheet()
+    usage = ConEdUsage()
+    usage.reset_electric_usage_worksheet()
 
 
 
