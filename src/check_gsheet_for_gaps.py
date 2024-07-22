@@ -4,7 +4,7 @@
 # from pprint import pprint
 
 from gspread_pandas import Spread
-# import pandas as pd
+import pandas as pd
 
 # from zmv_const import CONED_SPREADSHEET
 # import zmv_opower as opower
@@ -124,7 +124,24 @@ from zmv_opower_gsheets import ConEdUsage
 def main() -> None:
     usage = ConEdUsage()
 
-    usage.check_gsheet_for_gaps()
+    usage.check_gsheet_for_gaps(weeks_to_check=6)
+
+    # gaps_df = pd.read_csv('df_opower_2024_07_22-14_11_08.csv')
+    # usage.append_new_opower_rows_to_gsheet(gaps_df)
+    # usage.sort_gsheet_by_date()
+
+    # gaps_df = pd.read_csv('df_opower_2024_07_22-10_52_15.csv')
+    # processed_df = usage.process_df_opower_for_appending_to_gsheet(gaps_df)
+    # print(processed_df)
+    # print(processed_df.dtypes)
+    # processed_df.to_csv('df_opower_2024_07_22-10_52_15_PROCESSED.csv')
+
+    # processed_df = pd.read_csv('df_opower_2024_07_22-10_52_15_PROCESSED.csv', index_col=0)
+    # print(processed_df)
+    # print(processed_df.dtypes)
+
+
+    
 
     # df_gaps = check_gsheet_for_gaps(spread)
     # if df_gaps.shape[0] > 0:
