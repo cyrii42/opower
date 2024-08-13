@@ -1,0 +1,961 @@
+,Type,Date,Start,End,Usage,Month,Price/kWh,Cost/15min,Summer?,Period
+0,Electric usage,06/28/2024,00:00,00:15,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+1,Electric usage,06/28/2024,00:15,00:30,0.18,Jun 2024,$0.335,$0.060,Yes,Non-Peak
+2,Electric usage,06/28/2024,00:30,00:45,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+3,Electric usage,06/28/2024,00:45,01:00,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+4,Electric usage,06/28/2024,01:00,01:15,0.174,Jun 2024,$0.335,$0.058,Yes,Non-Peak
+5,Electric usage,06/28/2024,01:15,01:30,0.177,Jun 2024,$0.335,$0.059,Yes,Non-Peak
+6,Electric usage,06/28/2024,01:30,01:45,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+7,Electric usage,06/28/2024,01:45,02:00,0.204,Jun 2024,$0.335,$0.068,Yes,Non-Peak
+8,Electric usage,06/28/2024,02:00,02:15,0.21,Jun 2024,$0.335,$0.070,Yes,Non-Peak
+9,Electric usage,06/28/2024,02:15,02:30,0.18,Jun 2024,$0.335,$0.060,Yes,Non-Peak
+10,Electric usage,06/28/2024,02:30,02:45,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+11,Electric usage,06/28/2024,02:45,03:00,0.192,Jun 2024,$0.335,$0.064,Yes,Non-Peak
+12,Electric usage,06/28/2024,03:00,03:15,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+13,Electric usage,06/28/2024,03:15,03:30,0.162,Jun 2024,$0.335,$0.054,Yes,Non-Peak
+14,Electric usage,06/28/2024,03:30,03:45,0.165,Jun 2024,$0.335,$0.055,Yes,Non-Peak
+15,Electric usage,06/28/2024,03:45,04:00,0.228,Jun 2024,$0.335,$0.076,Yes,Non-Peak
+16,Electric usage,06/28/2024,04:00,04:15,0.225,Jun 2024,$0.335,$0.075,Yes,Non-Peak
+17,Electric usage,06/28/2024,04:15,04:30,0.198,Jun 2024,$0.335,$0.066,Yes,Non-Peak
+18,Electric usage,06/28/2024,04:30,04:45,0.231,Jun 2024,$0.335,$0.077,Yes,Non-Peak
+19,Electric usage,06/28/2024,04:45,05:00,0.213,Jun 2024,$0.335,$0.071,Yes,Non-Peak
+20,Electric usage,06/28/2024,05:00,05:15,0.207,Jun 2024,$0.335,$0.069,Yes,Non-Peak
+21,Electric usage,06/28/2024,05:15,05:30,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+22,Electric usage,06/28/2024,05:30,05:45,0.177,Jun 2024,$0.335,$0.059,Yes,Non-Peak
+23,Electric usage,06/28/2024,05:45,06:00,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+24,Electric usage,06/28/2024,06:00,06:15,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+25,Electric usage,06/28/2024,06:15,06:30,0.156,Jun 2024,$0.335,$0.052,Yes,Non-Peak
+26,Electric usage,06/28/2024,06:30,06:45,0.153,Jun 2024,$0.335,$0.051,Yes,Non-Peak
+27,Electric usage,06/28/2024,06:45,07:00,0.207,Jun 2024,$0.335,$0.069,Yes,Non-Peak
+28,Electric usage,06/28/2024,07:00,07:15,0.231,Jun 2024,$0.335,$0.077,Yes,Non-Peak
+29,Electric usage,06/28/2024,07:15,07:30,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+30,Electric usage,06/28/2024,07:30,07:45,0.165,Jun 2024,$0.335,$0.055,Yes,Non-Peak
+31,Electric usage,06/28/2024,07:45,08:00,0.174,Jun 2024,$0.335,$0.058,Yes,Non-Peak
+32,Electric usage,06/28/2024,08:00,08:15,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+33,Electric usage,06/28/2024,08:15,08:30,0.156,Jun 2024,$0.335,$0.052,Yes,Summer Peak
+34,Electric usage,06/28/2024,08:30,08:45,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+35,Electric usage,06/28/2024,08:45,09:00,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+36,Electric usage,06/28/2024,09:00,09:15,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+37,Electric usage,06/28/2024,09:15,09:30,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+38,Electric usage,06/28/2024,09:30,09:45,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+39,Electric usage,06/28/2024,09:45,10:00,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+40,Electric usage,06/28/2024,10:00,10:15,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+41,Electric usage,06/28/2024,10:15,10:30,0.165,Jun 2024,$0.335,$0.055,Yes,Summer Peak
+42,Electric usage,06/28/2024,10:30,10:45,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+43,Electric usage,06/28/2024,10:45,11:00,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+44,Electric usage,06/28/2024,11:00,11:15,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+45,Electric usage,06/28/2024,11:15,11:30,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+46,Electric usage,06/28/2024,11:30,11:45,0.156,Jun 2024,$0.335,$0.052,Yes,Summer Peak
+47,Electric usage,06/28/2024,11:45,12:00,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+48,Electric usage,06/28/2024,12:00,12:15,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+49,Electric usage,06/28/2024,12:15,12:30,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+50,Electric usage,06/28/2024,12:30,12:45,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+51,Electric usage,06/28/2024,12:45,13:00,0.219,Jun 2024,$0.335,$0.073,Yes,Summer Peak
+52,Electric usage,06/28/2024,13:00,13:15,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+53,Electric usage,06/28/2024,13:15,13:30,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+54,Electric usage,06/28/2024,13:30,13:45,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+55,Electric usage,06/28/2024,13:45,14:00,0.489,Jun 2024,$0.335,$0.164,Yes,Summer Peak
+56,Electric usage,06/28/2024,14:00,14:15,0.282,Jun 2024,$0.335,$0.094,Yes,Super Peak
+57,Electric usage,06/28/2024,14:15,14:30,0.234,Jun 2024,$0.335,$0.078,Yes,Super Peak
+58,Electric usage,06/28/2024,14:30,14:45,0.183,Jun 2024,$0.335,$0.061,Yes,Super Peak
+59,Electric usage,06/28/2024,14:45,15:00,0.171,Jun 2024,$0.335,$0.057,Yes,Super Peak
+60,Electric usage,06/28/2024,15:00,15:15,0.192,Jun 2024,$0.335,$0.064,Yes,Super Peak
+61,Electric usage,06/28/2024,15:15,15:30,0.177,Jun 2024,$0.335,$0.059,Yes,Super Peak
+62,Electric usage,06/28/2024,15:30,15:45,0.18,Jun 2024,$0.335,$0.060,Yes,Super Peak
+63,Electric usage,06/28/2024,15:45,16:00,0.168,Jun 2024,$0.335,$0.056,Yes,Super Peak
+64,Electric usage,06/28/2024,16:00,16:15,0.195,Jun 2024,$0.335,$0.065,Yes,Super Peak
+65,Electric usage,06/28/2024,16:15,16:30,0.192,Jun 2024,$0.335,$0.064,Yes,Super Peak
+66,Electric usage,06/28/2024,16:30,16:45,0.192,Jun 2024,$0.335,$0.064,Yes,Super Peak
+67,Electric usage,06/28/2024,16:45,17:00,0.165,Jun 2024,$0.335,$0.055,Yes,Super Peak
+68,Electric usage,06/28/2024,17:00,17:15,0.174,Jun 2024,$0.335,$0.058,Yes,Super Peak
+69,Electric usage,06/28/2024,17:15,17:30,0.186,Jun 2024,$0.335,$0.062,Yes,Super Peak
+70,Electric usage,06/28/2024,17:30,17:45,0.156,Jun 2024,$0.335,$0.052,Yes,Super Peak
+71,Electric usage,06/28/2024,17:45,18:00,0.171,Jun 2024,$0.335,$0.057,Yes,Super Peak
+72,Electric usage,06/28/2024,18:00,18:15,0.213,Jun 2024,$0.335,$0.071,Yes,Summer Peak
+73,Electric usage,06/28/2024,18:15,18:30,0.222,Jun 2024,$0.335,$0.074,Yes,Summer Peak
+74,Electric usage,06/28/2024,18:30,18:45,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+75,Electric usage,06/28/2024,18:45,19:00,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+76,Electric usage,06/28/2024,19:00,19:15,0.165,Jun 2024,$0.335,$0.055,Yes,Summer Peak
+77,Electric usage,06/28/2024,19:15,19:30,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+78,Electric usage,06/28/2024,19:30,19:45,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+79,Electric usage,06/28/2024,19:45,20:00,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+80,Electric usage,06/28/2024,20:00,20:15,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+81,Electric usage,06/28/2024,20:15,20:30,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+82,Electric usage,06/28/2024,20:30,20:45,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+83,Electric usage,06/28/2024,20:45,21:00,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+84,Electric usage,06/28/2024,21:00,21:15,0.213,Jun 2024,$0.335,$0.071,Yes,Summer Peak
+85,Electric usage,06/28/2024,21:15,21:30,0.204,Jun 2024,$0.335,$0.068,Yes,Summer Peak
+86,Electric usage,06/28/2024,21:30,21:45,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+87,Electric usage,06/28/2024,21:45,22:00,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+88,Electric usage,06/28/2024,22:00,22:15,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+89,Electric usage,06/28/2024,22:15,22:30,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+90,Electric usage,06/28/2024,22:30,22:45,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+91,Electric usage,06/28/2024,22:45,23:00,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+92,Electric usage,06/28/2024,23:00,23:15,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+93,Electric usage,06/28/2024,23:15,23:30,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+94,Electric usage,06/28/2024,23:30,23:45,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+95,Electric usage,06/28/2024,23:45,00:00,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+96,Electric usage,06/29/2024,00:00,00:15,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+97,Electric usage,06/29/2024,00:15,00:30,0.192,Jun 2024,$0.335,$0.064,Yes,Non-Peak
+98,Electric usage,06/29/2024,00:30,00:45,0.171,Jun 2024,$0.335,$0.057,Yes,Non-Peak
+99,Electric usage,06/29/2024,00:45,01:00,0.168,Jun 2024,$0.335,$0.056,Yes,Non-Peak
+100,Electric usage,06/29/2024,01:00,01:15,0.168,Jun 2024,$0.335,$0.056,Yes,Non-Peak
+101,Electric usage,06/29/2024,01:15,01:30,0.201,Jun 2024,$0.335,$0.067,Yes,Non-Peak
+102,Electric usage,06/29/2024,01:30,01:45,0.204,Jun 2024,$0.335,$0.068,Yes,Non-Peak
+103,Electric usage,06/29/2024,01:45,02:00,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+104,Electric usage,06/29/2024,02:00,02:15,0.18,Jun 2024,$0.335,$0.060,Yes,Non-Peak
+105,Electric usage,06/29/2024,02:15,02:30,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+106,Electric usage,06/29/2024,02:30,02:45,0.198,Jun 2024,$0.335,$0.066,Yes,Non-Peak
+107,Electric usage,06/29/2024,02:45,03:00,0.174,Jun 2024,$0.335,$0.058,Yes,Non-Peak
+108,Electric usage,06/29/2024,03:00,03:15,0.201,Jun 2024,$0.335,$0.067,Yes,Non-Peak
+109,Electric usage,06/29/2024,03:15,03:30,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+110,Electric usage,06/29/2024,03:30,03:45,0.213,Jun 2024,$0.335,$0.071,Yes,Non-Peak
+111,Electric usage,06/29/2024,03:45,04:00,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+112,Electric usage,06/29/2024,04:00,04:15,0.162,Jun 2024,$0.335,$0.054,Yes,Non-Peak
+113,Electric usage,06/29/2024,04:15,04:30,0.18,Jun 2024,$0.335,$0.060,Yes,Non-Peak
+114,Electric usage,06/29/2024,04:30,04:45,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+115,Electric usage,06/29/2024,04:45,05:00,0.168,Jun 2024,$0.335,$0.056,Yes,Non-Peak
+116,Electric usage,06/29/2024,05:00,05:15,0.204,Jun 2024,$0.335,$0.068,Yes,Non-Peak
+117,Electric usage,06/29/2024,05:15,05:30,0.219,Jun 2024,$0.335,$0.073,Yes,Non-Peak
+118,Electric usage,06/29/2024,05:30,05:45,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+119,Electric usage,06/29/2024,05:45,06:00,0.162,Jun 2024,$0.335,$0.054,Yes,Non-Peak
+120,Electric usage,06/29/2024,06:00,06:15,0.165,Jun 2024,$0.335,$0.055,Yes,Non-Peak
+121,Electric usage,06/29/2024,06:15,06:30,0.171,Jun 2024,$0.335,$0.057,Yes,Non-Peak
+122,Electric usage,06/29/2024,06:30,06:45,0.183,Jun 2024,$0.335,$0.061,Yes,Non-Peak
+123,Electric usage,06/29/2024,06:45,07:00,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+124,Electric usage,06/29/2024,07:00,07:15,0.18,Jun 2024,$0.335,$0.060,Yes,Non-Peak
+125,Electric usage,06/29/2024,07:15,07:30,0.192,Jun 2024,$0.335,$0.064,Yes,Non-Peak
+126,Electric usage,06/29/2024,07:30,07:45,0.204,Jun 2024,$0.335,$0.068,Yes,Non-Peak
+127,Electric usage,06/29/2024,07:45,08:00,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+128,Electric usage,06/29/2024,08:00,08:15,0.594,Jun 2024,$0.335,$0.199,Yes,Summer Peak
+129,Electric usage,06/29/2024,08:15,08:30,0.258,Jun 2024,$0.335,$0.086,Yes,Summer Peak
+130,Electric usage,06/29/2024,08:30,08:45,0.291,Jun 2024,$0.335,$0.097,Yes,Summer Peak
+131,Electric usage,06/29/2024,08:45,09:00,0.258,Jun 2024,$0.335,$0.086,Yes,Summer Peak
+132,Electric usage,06/29/2024,09:00,09:15,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+133,Electric usage,06/29/2024,09:15,09:30,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+134,Electric usage,06/29/2024,09:30,09:45,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+135,Electric usage,06/29/2024,09:45,10:00,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+136,Electric usage,06/29/2024,10:00,10:15,0.165,Jun 2024,$0.335,$0.055,Yes,Summer Peak
+137,Electric usage,06/29/2024,10:15,10:30,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+138,Electric usage,06/29/2024,10:30,10:45,0.222,Jun 2024,$0.335,$0.074,Yes,Summer Peak
+139,Electric usage,06/29/2024,10:45,11:00,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+140,Electric usage,06/29/2024,11:00,11:15,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+141,Electric usage,06/29/2024,11:15,11:30,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+142,Electric usage,06/29/2024,11:30,11:45,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+143,Electric usage,06/29/2024,11:45,12:00,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+144,Electric usage,06/29/2024,12:00,12:15,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+145,Electric usage,06/29/2024,12:15,12:30,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+146,Electric usage,06/29/2024,12:30,12:45,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+147,Electric usage,06/29/2024,12:45,13:00,0.222,Jun 2024,$0.335,$0.074,Yes,Summer Peak
+148,Electric usage,06/29/2024,13:00,13:15,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+149,Electric usage,06/29/2024,13:15,13:30,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+150,Electric usage,06/29/2024,13:30,13:45,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+151,Electric usage,06/29/2024,13:45,14:00,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+152,Electric usage,06/29/2024,14:00,14:15,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+153,Electric usage,06/29/2024,14:15,14:30,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+154,Electric usage,06/29/2024,14:30,14:45,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+155,Electric usage,06/29/2024,14:45,15:00,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+156,Electric usage,06/29/2024,15:00,15:15,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+157,Electric usage,06/29/2024,15:15,15:30,0.156,Jun 2024,$0.335,$0.052,Yes,Summer Peak
+158,Electric usage,06/29/2024,15:30,15:45,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+159,Electric usage,06/29/2024,15:45,16:00,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+160,Electric usage,06/29/2024,16:00,16:15,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+161,Electric usage,06/29/2024,16:15,16:30,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+162,Electric usage,06/29/2024,16:30,16:45,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+163,Electric usage,06/29/2024,16:45,17:00,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+164,Electric usage,06/29/2024,17:00,17:15,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+165,Electric usage,06/29/2024,17:15,17:30,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+166,Electric usage,06/29/2024,17:30,17:45,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+167,Electric usage,06/29/2024,17:45,18:00,0.231,Jun 2024,$0.335,$0.077,Yes,Summer Peak
+168,Electric usage,06/29/2024,18:00,18:15,0.21,Jun 2024,$0.335,$0.070,Yes,Summer Peak
+169,Electric usage,06/29/2024,18:15,18:30,0.219,Jun 2024,$0.335,$0.073,Yes,Summer Peak
+170,Electric usage,06/29/2024,18:30,18:45,0.219,Jun 2024,$0.335,$0.073,Yes,Summer Peak
+171,Electric usage,06/29/2024,18:45,19:00,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+172,Electric usage,06/29/2024,19:00,19:15,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+173,Electric usage,06/29/2024,19:15,19:30,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+174,Electric usage,06/29/2024,19:30,19:45,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+175,Electric usage,06/29/2024,19:45,20:00,0.207,Jun 2024,$0.335,$0.069,Yes,Summer Peak
+176,Electric usage,06/29/2024,20:00,20:15,0.222,Jun 2024,$0.335,$0.074,Yes,Summer Peak
+177,Electric usage,06/29/2024,20:15,20:30,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+178,Electric usage,06/29/2024,20:30,20:45,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+179,Electric usage,06/29/2024,20:45,21:00,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+180,Electric usage,06/29/2024,21:00,21:15,0.225,Jun 2024,$0.335,$0.075,Yes,Summer Peak
+181,Electric usage,06/29/2024,21:15,21:30,0.204,Jun 2024,$0.335,$0.068,Yes,Summer Peak
+182,Electric usage,06/29/2024,21:30,21:45,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+183,Electric usage,06/29/2024,21:45,22:00,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+184,Electric usage,06/29/2024,22:00,22:15,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+185,Electric usage,06/29/2024,22:15,22:30,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+186,Electric usage,06/29/2024,22:30,22:45,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+187,Electric usage,06/29/2024,22:45,23:00,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+188,Electric usage,06/29/2024,23:00,23:15,0.204,Jun 2024,$0.335,$0.068,Yes,Summer Peak
+189,Electric usage,06/29/2024,23:15,23:30,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+190,Electric usage,06/29/2024,23:30,23:45,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+191,Electric usage,06/29/2024,23:45,00:00,0.213,Jun 2024,$0.335,$0.071,Yes,Summer Peak
+192,Electric usage,06/30/2024,00:00,00:15,0.222,Jun 2024,$0.335,$0.074,Yes,Non-Peak
+193,Electric usage,06/30/2024,00:15,00:30,0.234,Jun 2024,$0.335,$0.078,Yes,Non-Peak
+194,Electric usage,06/30/2024,00:30,00:45,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+195,Electric usage,06/30/2024,00:45,01:00,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+196,Electric usage,06/30/2024,01:00,01:15,0.192,Jun 2024,$0.335,$0.064,Yes,Non-Peak
+197,Electric usage,06/30/2024,01:15,01:30,0.201,Jun 2024,$0.335,$0.067,Yes,Non-Peak
+198,Electric usage,06/30/2024,01:30,01:45,0.162,Jun 2024,$0.335,$0.054,Yes,Non-Peak
+199,Electric usage,06/30/2024,01:45,02:00,0.159,Jun 2024,$0.335,$0.053,Yes,Non-Peak
+200,Electric usage,06/30/2024,02:00,02:15,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+201,Electric usage,06/30/2024,02:15,02:30,0.207,Jun 2024,$0.335,$0.069,Yes,Non-Peak
+202,Electric usage,06/30/2024,02:30,02:45,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+203,Electric usage,06/30/2024,02:45,03:00,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+204,Electric usage,06/30/2024,03:00,03:15,0.207,Jun 2024,$0.335,$0.069,Yes,Non-Peak
+205,Electric usage,06/30/2024,03:15,03:30,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+206,Electric usage,06/30/2024,03:30,03:45,0.171,Jun 2024,$0.335,$0.057,Yes,Non-Peak
+207,Electric usage,06/30/2024,03:45,04:00,0.168,Jun 2024,$0.335,$0.056,Yes,Non-Peak
+208,Electric usage,06/30/2024,04:00,04:15,0.18,Jun 2024,$0.335,$0.060,Yes,Non-Peak
+209,Electric usage,06/30/2024,04:15,04:30,0.204,Jun 2024,$0.335,$0.068,Yes,Non-Peak
+210,Electric usage,06/30/2024,04:30,04:45,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+211,Electric usage,06/30/2024,04:45,05:00,0.204,Jun 2024,$0.335,$0.068,Yes,Non-Peak
+212,Electric usage,06/30/2024,05:00,05:15,0.306,Jun 2024,$0.335,$0.103,Yes,Non-Peak
+213,Electric usage,06/30/2024,05:15,05:30,0.285,Jun 2024,$0.335,$0.095,Yes,Non-Peak
+214,Electric usage,06/30/2024,05:30,05:45,0.261,Jun 2024,$0.335,$0.087,Yes,Non-Peak
+215,Electric usage,06/30/2024,05:45,06:00,0.195,Jun 2024,$0.335,$0.065,Yes,Non-Peak
+216,Electric usage,06/30/2024,06:00,06:15,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+217,Electric usage,06/30/2024,06:15,06:30,0.198,Jun 2024,$0.335,$0.066,Yes,Non-Peak
+218,Electric usage,06/30/2024,06:30,06:45,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+219,Electric usage,06/30/2024,06:45,07:00,0.177,Jun 2024,$0.335,$0.059,Yes,Non-Peak
+220,Electric usage,06/30/2024,07:00,07:15,0.171,Jun 2024,$0.335,$0.057,Yes,Non-Peak
+221,Electric usage,06/30/2024,07:15,07:30,0.189,Jun 2024,$0.335,$0.063,Yes,Non-Peak
+222,Electric usage,06/30/2024,07:30,07:45,0.174,Jun 2024,$0.335,$0.058,Yes,Non-Peak
+223,Electric usage,06/30/2024,07:45,08:00,0.186,Jun 2024,$0.335,$0.062,Yes,Non-Peak
+224,Electric usage,06/30/2024,08:00,08:15,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+225,Electric usage,06/30/2024,08:15,08:30,0.213,Jun 2024,$0.335,$0.071,Yes,Summer Peak
+226,Electric usage,06/30/2024,08:30,08:45,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+227,Electric usage,06/30/2024,08:45,09:00,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+228,Electric usage,06/30/2024,09:00,09:15,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+229,Electric usage,06/30/2024,09:15,09:30,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+230,Electric usage,06/30/2024,09:30,09:45,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+231,Electric usage,06/30/2024,09:45,10:00,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+232,Electric usage,06/30/2024,10:00,10:15,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+233,Electric usage,06/30/2024,10:15,10:30,0.231,Jun 2024,$0.335,$0.077,Yes,Summer Peak
+234,Electric usage,06/30/2024,10:30,10:45,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+235,Electric usage,06/30/2024,10:45,11:00,0.156,Jun 2024,$0.335,$0.052,Yes,Summer Peak
+236,Electric usage,06/30/2024,11:00,11:15,0.174,Jun 2024,$0.335,$0.058,Yes,Summer Peak
+237,Electric usage,06/30/2024,11:15,11:30,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+238,Electric usage,06/30/2024,11:30,11:45,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+239,Electric usage,06/30/2024,11:45,12:00,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+240,Electric usage,06/30/2024,12:00,12:15,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+241,Electric usage,06/30/2024,12:15,12:30,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+242,Electric usage,06/30/2024,12:30,12:45,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+243,Electric usage,06/30/2024,12:45,13:00,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+244,Electric usage,06/30/2024,13:00,13:15,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+245,Electric usage,06/30/2024,13:15,13:30,0.207,Jun 2024,$0.335,$0.069,Yes,Summer Peak
+246,Electric usage,06/30/2024,13:30,13:45,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+247,Electric usage,06/30/2024,13:45,14:00,0.198,Jun 2024,$0.335,$0.066,Yes,Summer Peak
+248,Electric usage,06/30/2024,14:00,14:15,0.258,Jun 2024,$0.335,$0.086,Yes,Summer Peak
+249,Electric usage,06/30/2024,14:15,14:30,0.264,Jun 2024,$0.335,$0.088,Yes,Summer Peak
+250,Electric usage,06/30/2024,14:30,14:45,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+251,Electric usage,06/30/2024,14:45,15:00,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+252,Electric usage,06/30/2024,15:00,15:15,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+253,Electric usage,06/30/2024,15:15,15:30,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+254,Electric usage,06/30/2024,15:30,15:45,0.216,Jun 2024,$0.335,$0.072,Yes,Summer Peak
+255,Electric usage,06/30/2024,15:45,16:00,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+256,Electric usage,06/30/2024,16:00,16:15,0.162,Jun 2024,$0.335,$0.054,Yes,Summer Peak
+257,Electric usage,06/30/2024,16:15,16:30,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+258,Electric usage,06/30/2024,16:30,16:45,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+259,Electric usage,06/30/2024,16:45,17:00,0.165,Jun 2024,$0.335,$0.055,Yes,Summer Peak
+260,Electric usage,06/30/2024,17:00,17:15,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+261,Electric usage,06/30/2024,17:15,17:30,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+262,Electric usage,06/30/2024,17:30,17:45,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+263,Electric usage,06/30/2024,17:45,18:00,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+264,Electric usage,06/30/2024,18:00,18:15,0.159,Jun 2024,$0.335,$0.053,Yes,Summer Peak
+265,Electric usage,06/30/2024,18:15,18:30,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+266,Electric usage,06/30/2024,18:30,18:45,0.186,Jun 2024,$0.335,$0.062,Yes,Summer Peak
+267,Electric usage,06/30/2024,18:45,19:00,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+268,Electric usage,06/30/2024,19:00,19:15,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+269,Electric usage,06/30/2024,19:15,19:30,0.207,Jun 2024,$0.335,$0.069,Yes,Summer Peak
+270,Electric usage,06/30/2024,19:30,19:45,0.18,Jun 2024,$0.335,$0.060,Yes,Summer Peak
+271,Electric usage,06/30/2024,19:45,20:00,0.165,Jun 2024,$0.335,$0.055,Yes,Summer Peak
+272,Electric usage,06/30/2024,20:00,20:15,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+273,Electric usage,06/30/2024,20:15,20:30,0.207,Jun 2024,$0.335,$0.069,Yes,Summer Peak
+274,Electric usage,06/30/2024,20:30,20:45,0.222,Jun 2024,$0.335,$0.074,Yes,Summer Peak
+275,Electric usage,06/30/2024,20:45,21:00,0.21,Jun 2024,$0.335,$0.070,Yes,Summer Peak
+276,Electric usage,06/30/2024,21:00,21:15,0.195,Jun 2024,$0.335,$0.065,Yes,Summer Peak
+277,Electric usage,06/30/2024,21:15,21:30,0.177,Jun 2024,$0.335,$0.059,Yes,Summer Peak
+278,Electric usage,06/30/2024,21:30,21:45,0.201,Jun 2024,$0.335,$0.067,Yes,Summer Peak
+279,Electric usage,06/30/2024,21:45,22:00,0.168,Jun 2024,$0.335,$0.056,Yes,Summer Peak
+280,Electric usage,06/30/2024,22:00,22:15,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+281,Electric usage,06/30/2024,22:15,22:30,0.207,Jun 2024,$0.335,$0.069,Yes,Summer Peak
+282,Electric usage,06/30/2024,22:30,22:45,0.219,Jun 2024,$0.335,$0.073,Yes,Summer Peak
+283,Electric usage,06/30/2024,22:45,23:00,0.213,Jun 2024,$0.335,$0.071,Yes,Summer Peak
+284,Electric usage,06/30/2024,23:00,23:15,0.192,Jun 2024,$0.335,$0.064,Yes,Summer Peak
+285,Electric usage,06/30/2024,23:15,23:30,0.171,Jun 2024,$0.335,$0.057,Yes,Summer Peak
+286,Electric usage,06/30/2024,23:30,23:45,0.183,Jun 2024,$0.335,$0.061,Yes,Summer Peak
+287,Electric usage,06/30/2024,23:45,00:00,0.189,Jun 2024,$0.335,$0.063,Yes,Summer Peak
+288,Electric usage,07/01/2024,00:00,00:15,0.174,Jul 2024,$0.335,$0.058,Yes,Non-Peak
+289,Electric usage,07/01/2024,00:15,00:30,0.186,Jul 2024,$0.335,$0.062,Yes,Non-Peak
+290,Electric usage,07/01/2024,00:30,00:45,0.207,Jul 2024,$0.335,$0.069,Yes,Non-Peak
+291,Electric usage,07/01/2024,00:45,01:00,0.171,Jul 2024,$0.335,$0.057,Yes,Non-Peak
+292,Electric usage,07/01/2024,01:00,01:15,0.156,Jul 2024,$0.335,$0.052,Yes,Non-Peak
+293,Electric usage,07/01/2024,01:15,01:30,0.171,Jul 2024,$0.335,$0.057,Yes,Non-Peak
+294,Electric usage,07/01/2024,01:30,01:45,0.198,Jul 2024,$0.335,$0.066,Yes,Non-Peak
+295,Electric usage,07/01/2024,01:45,02:00,0.195,Jul 2024,$0.335,$0.065,Yes,Non-Peak
+296,Electric usage,07/01/2024,02:00,02:15,0.195,Jul 2024,$0.335,$0.065,Yes,Non-Peak
+297,Electric usage,07/01/2024,02:15,02:30,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+298,Electric usage,07/01/2024,02:30,02:45,0.186,Jul 2024,$0.335,$0.062,Yes,Non-Peak
+299,Electric usage,07/01/2024,02:45,03:00,0.177,Jul 2024,$0.335,$0.059,Yes,Non-Peak
+300,Electric usage,07/01/2024,03:00,03:15,0.165,Jul 2024,$0.335,$0.055,Yes,Non-Peak
+301,Electric usage,07/01/2024,03:15,03:30,0.165,Jul 2024,$0.335,$0.055,Yes,Non-Peak
+302,Electric usage,07/01/2024,03:30,03:45,0.207,Jul 2024,$0.335,$0.069,Yes,Non-Peak
+303,Electric usage,07/01/2024,03:45,04:00,0.198,Jul 2024,$0.335,$0.066,Yes,Non-Peak
+304,Electric usage,07/01/2024,04:00,04:15,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+305,Electric usage,07/01/2024,04:15,04:30,0.189,Jul 2024,$0.335,$0.063,Yes,Non-Peak
+306,Electric usage,07/01/2024,04:30,04:45,0.195,Jul 2024,$0.335,$0.065,Yes,Non-Peak
+307,Electric usage,07/01/2024,04:45,05:00,0.177,Jul 2024,$0.335,$0.059,Yes,Non-Peak
+308,Electric usage,07/01/2024,05:00,05:15,0.15,Jul 2024,$0.335,$0.050,Yes,Non-Peak
+309,Electric usage,07/01/2024,05:15,05:30,0.171,Jul 2024,$0.335,$0.057,Yes,Non-Peak
+310,Electric usage,07/01/2024,05:30,05:45,0.204,Jul 2024,$0.335,$0.068,Yes,Non-Peak
+311,Electric usage,07/01/2024,05:45,06:00,0.192,Jul 2024,$0.335,$0.064,Yes,Non-Peak
+312,Electric usage,07/01/2024,06:00,06:15,0.57,Jul 2024,$0.335,$0.191,Yes,Non-Peak
+313,Electric usage,07/01/2024,06:15,06:30,0.249,Jul 2024,$0.335,$0.083,Yes,Non-Peak
+314,Electric usage,07/01/2024,06:30,06:45,0.258,Jul 2024,$0.335,$0.086,Yes,Non-Peak
+315,Electric usage,07/01/2024,06:45,07:00,0.186,Jul 2024,$0.335,$0.062,Yes,Non-Peak
+316,Electric usage,07/01/2024,07:00,07:15,0.177,Jul 2024,$0.335,$0.059,Yes,Non-Peak
+317,Electric usage,07/01/2024,07:15,07:30,0.177,Jul 2024,$0.335,$0.059,Yes,Non-Peak
+318,Electric usage,07/01/2024,07:30,07:45,0.21,Jul 2024,$0.335,$0.070,Yes,Non-Peak
+319,Electric usage,07/01/2024,07:45,08:00,0.198,Jul 2024,$0.335,$0.066,Yes,Non-Peak
+320,Electric usage,07/01/2024,08:00,08:15,0.15,Jul 2024,$0.335,$0.050,Yes,Summer Peak
+321,Electric usage,07/01/2024,08:15,08:30,0.165,Jul 2024,$0.335,$0.055,Yes,Summer Peak
+322,Electric usage,07/01/2024,08:30,08:45,0.18,Jul 2024,$0.335,$0.060,Yes,Summer Peak
+323,Electric usage,07/01/2024,08:45,09:00,0.177,Jul 2024,$0.335,$0.059,Yes,Summer Peak
+324,Electric usage,07/01/2024,09:00,09:15,0.171,Jul 2024,$0.335,$0.057,Yes,Summer Peak
+325,Electric usage,07/01/2024,09:15,09:30,0.201,Jul 2024,$0.335,$0.067,Yes,Summer Peak
+326,Electric usage,07/01/2024,09:30,09:45,0.207,Jul 2024,$0.335,$0.069,Yes,Summer Peak
+327,Electric usage,07/01/2024,09:45,10:00,0.186,Jul 2024,$0.335,$0.062,Yes,Summer Peak
+328,Electric usage,07/01/2024,10:00,10:15,0.162,Jul 2024,$0.335,$0.054,Yes,Summer Peak
+329,Electric usage,07/01/2024,10:15,10:30,0.156,Jul 2024,$0.335,$0.052,Yes,Summer Peak
+330,Electric usage,07/01/2024,10:30,10:45,0.171,Jul 2024,$0.335,$0.057,Yes,Summer Peak
+331,Electric usage,07/01/2024,10:45,11:00,0.204,Jul 2024,$0.335,$0.068,Yes,Summer Peak
+332,Electric usage,07/01/2024,11:00,11:15,0.177,Jul 2024,$0.335,$0.059,Yes,Summer Peak
+333,Electric usage,07/01/2024,11:15,11:30,0.177,Jul 2024,$0.335,$0.059,Yes,Summer Peak
+334,Electric usage,07/01/2024,11:30,11:45,0.183,Jul 2024,$0.335,$0.061,Yes,Summer Peak
+335,Electric usage,07/01/2024,11:45,12:00,0.174,Jul 2024,$0.335,$0.058,Yes,Summer Peak
+336,Electric usage,07/01/2024,12:00,12:15,0.18,Jul 2024,$0.335,$0.060,Yes,Summer Peak
+337,Electric usage,07/01/2024,12:15,12:30,0.18,Jul 2024,$0.335,$0.060,Yes,Summer Peak
+338,Electric usage,07/01/2024,12:30,12:45,0.189,Jul 2024,$0.335,$0.063,Yes,Summer Peak
+339,Electric usage,07/01/2024,12:45,13:00,0.201,Jul 2024,$0.335,$0.067,Yes,Summer Peak
+340,Electric usage,07/01/2024,13:00,13:15,0.18,Jul 2024,$0.335,$0.060,Yes,Summer Peak
+341,Electric usage,07/01/2024,13:15,13:30,0.159,Jul 2024,$0.335,$0.053,Yes,Summer Peak
+342,Electric usage,07/01/2024,13:30,13:45,0.165,Jul 2024,$0.335,$0.055,Yes,Summer Peak
+343,Electric usage,07/01/2024,13:45,14:00,0.183,Jul 2024,$0.335,$0.061,Yes,Summer Peak
+344,Electric usage,07/01/2024,14:00,14:15,0.147,Jul 2024,$0.335,$0.049,Yes,Super Peak
+345,Electric usage,07/01/2024,14:15,14:30,0.18,Jul 2024,$0.335,$0.060,Yes,Super Peak
+346,Electric usage,07/01/2024,14:30,14:45,0.216,Jul 2024,$0.335,$0.072,Yes,Super Peak
+347,Electric usage,07/01/2024,14:45,15:00,0.21,Jul 2024,$0.335,$0.070,Yes,Super Peak
+348,Electric usage,07/01/2024,15:00,15:15,0.162,Jul 2024,$0.335,$0.054,Yes,Super Peak
+349,Electric usage,07/01/2024,15:15,15:30,0.162,Jul 2024,$0.335,$0.054,Yes,Super Peak
+350,Electric usage,07/01/2024,15:30,15:45,0.165,Jul 2024,$0.335,$0.055,Yes,Super Peak
+351,Electric usage,07/01/2024,15:45,16:00,0.174,Jul 2024,$0.335,$0.058,Yes,Super Peak
+352,Electric usage,07/01/2024,16:00,16:15,0.18,Jul 2024,$0.335,$0.060,Yes,Super Peak
+353,Electric usage,07/01/2024,16:15,16:30,0.177,Jul 2024,$0.335,$0.059,Yes,Super Peak
+354,Electric usage,07/01/2024,16:30,16:45,0.186,Jul 2024,$0.335,$0.062,Yes,Super Peak
+355,Electric usage,07/01/2024,16:45,17:00,0.198,Jul 2024,$0.335,$0.066,Yes,Super Peak
+356,Electric usage,07/01/2024,17:00,17:15,0.165,Jul 2024,$0.335,$0.055,Yes,Super Peak
+357,Electric usage,07/01/2024,17:15,17:30,0.18,Jul 2024,$0.335,$0.060,Yes,Super Peak
+358,Electric usage,07/01/2024,17:30,17:45,0.174,Jul 2024,$0.335,$0.058,Yes,Super Peak
+359,Electric usage,07/01/2024,17:45,18:00,0.198,Jul 2024,$0.335,$0.066,Yes,Super Peak
+360,Electric usage,07/01/2024,18:00,18:15,0.174,Jul 2024,$0.335,$0.058,Yes,Summer Peak
+361,Electric usage,07/01/2024,18:15,18:30,0.189,Jul 2024,$0.335,$0.063,Yes,Summer Peak
+362,Electric usage,07/01/2024,18:30,18:45,0.174,Jul 2024,$0.335,$0.058,Yes,Summer Peak
+363,Electric usage,07/01/2024,18:45,19:00,0.177,Jul 2024,$0.335,$0.059,Yes,Summer Peak
+364,Electric usage,07/01/2024,19:00,19:15,0.165,Jul 2024,$0.335,$0.055,Yes,Summer Peak
+365,Electric usage,07/01/2024,19:15,19:30,0.153,Jul 2024,$0.335,$0.051,Yes,Summer Peak
+366,Electric usage,07/01/2024,19:30,19:45,0.204,Jul 2024,$0.335,$0.068,Yes,Summer Peak
+367,Electric usage,07/01/2024,19:45,20:00,0.225,Jul 2024,$0.335,$0.075,Yes,Summer Peak
+368,Electric usage,07/01/2024,20:00,20:15,0.198,Jul 2024,$0.335,$0.066,Yes,Summer Peak
+369,Electric usage,07/01/2024,20:15,20:30,0.18,Jul 2024,$0.335,$0.060,Yes,Summer Peak
+370,Electric usage,07/01/2024,20:30,20:45,0.195,Jul 2024,$0.335,$0.065,Yes,Summer Peak
+371,Electric usage,07/01/2024,20:45,21:00,0.192,Jul 2024,$0.335,$0.064,Yes,Summer Peak
+372,Electric usage,07/01/2024,21:00,21:15,0.177,Jul 2024,$0.335,$0.059,Yes,Summer Peak
+373,Electric usage,07/01/2024,21:15,21:30,0.198,Jul 2024,$0.335,$0.066,Yes,Summer Peak
+374,Electric usage,07/01/2024,21:30,21:45,0.195,Jul 2024,$0.335,$0.065,Yes,Summer Peak
+375,Electric usage,07/01/2024,21:45,22:00,0.213,Jul 2024,$0.335,$0.071,Yes,Summer Peak
+376,Electric usage,07/01/2024,22:00,22:15,0.189,Jul 2024,$0.335,$0.063,Yes,Summer Peak
+377,Electric usage,07/01/2024,22:15,22:30,0.186,Jul 2024,$0.335,$0.062,Yes,Summer Peak
+378,Electric usage,07/01/2024,22:30,22:45,0.195,Jul 2024,$0.335,$0.065,Yes,Summer Peak
+379,Electric usage,07/01/2024,22:45,23:00,0.195,Jul 2024,$0.335,$0.065,Yes,Summer Peak
+380,Electric usage,07/01/2024,23:00,23:15,0.177,Jul 2024,$0.335,$0.059,Yes,Summer Peak
+381,Electric usage,07/01/2024,23:15,23:30,0.189,Jul 2024,$0.335,$0.063,Yes,Summer Peak
+382,Electric usage,07/01/2024,23:30,23:45,0.21,Jul 2024,$0.335,$0.070,Yes,Summer Peak
+383,Electric usage,07/01/2024,23:45,00:00,0.198,Jul 2024,$0.335,$0.066,Yes,Summer Peak
+384,Electric usage,07/07/2024,00:00,00:15,0.198,Jul 2024,$0.335,$0.066,Yes,Non-Peak
+385,Electric usage,07/07/2024,00:15,00:30,0.195,Jul 2024,$0.335,$0.065,Yes,Non-Peak
+386,Electric usage,07/07/2024,00:30,00:45,0.189,Jul 2024,$0.335,$0.063,Yes,Non-Peak
+387,Electric usage,07/07/2024,00:45,01:00,0.162,Jul 2024,$0.335,$0.054,Yes,Non-Peak
+388,Electric usage,07/07/2024,01:00,01:15,0.177,Jul 2024,$0.335,$0.059,Yes,Non-Peak
+389,Electric usage,07/07/2024,01:15,01:30,0.213,Jul 2024,$0.335,$0.071,Yes,Non-Peak
+390,Electric usage,07/07/2024,01:30,01:45,0.189,Jul 2024,$0.335,$0.063,Yes,Non-Peak
+391,Electric usage,07/07/2024,01:45,02:00,0.207,Jul 2024,$0.335,$0.069,Yes,Non-Peak
+392,Electric usage,07/07/2024,02:00,02:15,0.21,Jul 2024,$0.335,$0.070,Yes,Non-Peak
+393,Electric usage,07/07/2024,02:15,02:30,0.195,Jul 2024,$0.335,$0.065,Yes,Non-Peak
+394,Electric usage,07/07/2024,02:30,02:45,0.174,Jul 2024,$0.335,$0.058,Yes,Non-Peak
+395,Electric usage,07/07/2024,02:45,03:00,0.171,Jul 2024,$0.335,$0.057,Yes,Non-Peak
+396,Electric usage,07/07/2024,03:00,03:15,0.192,Jul 2024,$0.335,$0.064,Yes,Non-Peak
+397,Electric usage,07/07/2024,03:15,03:30,0.21,Jul 2024,$0.335,$0.070,Yes,Non-Peak
+398,Electric usage,07/07/2024,03:30,03:45,0.207,Jul 2024,$0.335,$0.069,Yes,Non-Peak
+399,Electric usage,07/07/2024,03:45,04:00,0.183,Jul 2024,$0.335,$0.061,Yes,Non-Peak
+400,Electric usage,07/07/2024,04:00,04:15,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+401,Electric usage,07/07/2024,04:15,04:30,0.213,Jul 2024,$0.335,$0.071,Yes,Non-Peak
+402,Electric usage,07/07/2024,04:30,04:45,0.189,Jul 2024,$0.335,$0.063,Yes,Non-Peak
+403,Electric usage,07/07/2024,04:45,05:00,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+404,Electric usage,07/07/2024,05:00,05:15,0.198,Jul 2024,$0.335,$0.066,Yes,Non-Peak
+405,Electric usage,07/07/2024,05:15,05:30,0.21,Jul 2024,$0.335,$0.070,Yes,Non-Peak
+406,Electric usage,07/07/2024,05:30,05:45,0.192,Jul 2024,$0.335,$0.064,Yes,Non-Peak
+407,Electric usage,07/07/2024,05:45,06:00,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+408,Electric usage,07/07/2024,06:00,06:15,0.171,Jul 2024,$0.335,$0.057,Yes,Non-Peak
+409,Electric usage,07/07/2024,06:15,06:30,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+410,Electric usage,07/07/2024,06:30,06:45,0.174,Jul 2024,$0.335,$0.058,Yes,Non-Peak
+411,Electric usage,07/07/2024,06:45,07:00,0.186,Jul 2024,$0.335,$0.062,Yes,Non-Peak
+412,Electric usage,07/07/2024,07:00,07:15,0.222,Jul 2024,$0.335,$0.074,Yes,Non-Peak
+413,Electric usage,07/07/2024,07:15,07:30,0.225,Jul 2024,$0.335,$0.075,Yes,Non-Peak
+414,Electric usage,07/07/2024,07:30,07:45,0.18,Jul 2024,$0.335,$0.060,Yes,Non-Peak
+415,Electric usage,07/07/2024,07:45,08:00,0.165,Jul 2024,$0.335,$0.055,Yes,Non-Peak
+416,Electric usage,07/07/2024,08:00,08:15,0.6,Jul 2024,$0.335,$0.201,Yes,Summer Peak
+417,Electric usage,07/07/2024,08:15,08:30,0.276,Jul 2024,$0.335,$0.092,Yes,Summer Peak
+418,Electric usage,07/07/2024,08:30,08:45,0.24,Jul 2024,$0.335,$0.080,Yes,Summer Peak
+419,Electric usage,07/07/2024,08:45,09:00,0.189,Jul 2024,$0.335,$0.063,Yes,Summer Peak
+420,Electric usage,07/07/2024,09:00,09:15,0.234,Jul 2024,$0.335,$0.078,Yes,Summer Peak
+421,Electric usage,07/07/2024,09:15,09:30,0.909,Jul 2024,$0.335,$0.305,Yes,Summer Peak
+422,Electric usage,07/07/2024,09:30,09:45,1.023,Jul 2024,$0.335,$0.343,Yes,Summer Peak
+423,Electric usage,07/07/2024,09:45,10:00,1.011,Jul 2024,$0.335,$0.339,Yes,Summer Peak
+424,Electric usage,07/07/2024,10:00,10:15,1.041,Jul 2024,$0.335,$0.349,Yes,Summer Peak
+425,Electric usage,07/07/2024,10:15,10:30,1.065,Jul 2024,$0.335,$0.357,Yes,Summer Peak
+426,Electric usage,07/07/2024,10:30,10:45,1.056,Jul 2024,$0.335,$0.354,Yes,Summer Peak
+427,Electric usage,07/07/2024,10:45,11:00,1.077,Jul 2024,$0.335,$0.361,Yes,Summer Peak
+428,Electric usage,07/07/2024,11:00,11:15,1.092,Jul 2024,$0.335,$0.366,Yes,Summer Peak
+429,Electric usage,07/07/2024,11:15,11:30,1.11,Jul 2024,$0.335,$0.372,Yes,Summer Peak
+430,Electric usage,07/07/2024,11:30,11:45,1.074,Jul 2024,$0.335,$0.360,Yes,Summer Peak
+431,Electric usage,07/07/2024,11:45,12:00,1.065,Jul 2024,$0.335,$0.357,Yes,Summer Peak
+432,Electric usage,07/07/2024,12:00,12:15,1.086,Jul 2024,$0.335,$0.364,Yes,Summer Peak
+433,Electric usage,07/07/2024,12:15,12:30,1.086,Jul 2024,$0.335,$0.364,Yes,Summer Peak
+434,Electric usage,07/07/2024,12:30,12:45,1.062,Jul 2024,$0.335,$0.356,Yes,Summer Peak
+435,Electric usage,07/07/2024,12:45,13:00,1.05,Jul 2024,$0.335,$0.352,Yes,Summer Peak
+436,Electric usage,07/07/2024,13:00,13:15,1.08,Jul 2024,$0.335,$0.362,Yes,Summer Peak
+437,Electric usage,07/07/2024,13:15,13:30,1.056,Jul 2024,$0.335,$0.354,Yes,Summer Peak
+438,Electric usage,07/07/2024,13:30,13:45,1.041,Jul 2024,$0.335,$0.349,Yes,Summer Peak
+439,Electric usage,07/07/2024,13:45,14:00,1.056,Jul 2024,$0.335,$0.354,Yes,Summer Peak
+440,Electric usage,07/07/2024,14:00,14:15,1.071,Jul 2024,$0.335,$0.359,Yes,Summer Peak
+441,Electric usage,07/07/2024,14:15,14:30,1.524,Jul 2024,$0.335,$0.511,Yes,Summer Peak
+442,Electric usage,07/07/2024,14:30,14:45,1.662,Jul 2024,$0.335,$0.557,Yes,Summer Peak
+443,Electric usage,07/07/2024,14:45,15:00,1.659,Jul 2024,$0.335,$0.556,Yes,Summer Peak
+444,Electric usage,07/07/2024,15:00,15:15,1.659,Jul 2024,$0.335,$0.556,Yes,Summer Peak
+445,Electric usage,07/07/2024,15:15,15:30,1.713,Jul 2024,$0.335,$0.574,Yes,Summer Peak
+446,Electric usage,07/07/2024,15:30,15:45,1.755,Jul 2024,$0.335,$0.588,Yes,Summer Peak
+447,Electric usage,07/07/2024,15:45,16:00,1.713,Jul 2024,$0.335,$0.574,Yes,Summer Peak
+448,Electric usage,07/07/2024,16:00,16:15,1.692,Jul 2024,$0.335,$0.567,Yes,Summer Peak
+449,Electric usage,07/07/2024,16:15,16:30,1.62,Jul 2024,$0.335,$0.543,Yes,Summer Peak
+450,Electric usage,07/07/2024,16:30,16:45,1.713,Jul 2024,$0.335,$0.574,Yes,Summer Peak
+451,Electric usage,07/07/2024,16:45,17:00,1.737,Jul 2024,$0.335,$0.582,Yes,Summer Peak
+452,Electric usage,07/07/2024,17:00,17:15,0.936,Jul 2024,$0.335,$0.314,Yes,Summer Peak
+453,Electric usage,07/07/2024,17:15,17:30,1.122,Jul 2024,$0.335,$0.376,Yes,Summer Peak
+454,Electric usage,07/07/2024,17:30,17:45,1.794,Jul 2024,$0.335,$0.601,Yes,Summer Peak
+455,Electric usage,07/07/2024,17:45,18:00,1.677,Jul 2024,$0.335,$0.562,Yes,Summer Peak
+456,Electric usage,07/07/2024,18:00,18:15,1.326,Jul 2024,$0.335,$0.444,Yes,Summer Peak
+457,Electric usage,07/07/2024,18:15,18:30,1.35,Jul 2024,$0.335,$0.452,Yes,Summer Peak
+458,Electric usage,07/07/2024,18:30,18:45,1.941,Jul 2024,$0.335,$0.650,Yes,Summer Peak
+459,Electric usage,07/07/2024,18:45,19:00,1.524,Jul 2024,$0.335,$0.511,Yes,Summer Peak
+460,Electric usage,07/07/2024,19:00,19:15,1.608,Jul 2024,$0.335,$0.539,Yes,Summer Peak
+461,Electric usage,07/07/2024,19:15,19:30,1.512,Jul 2024,$0.335,$0.507,Yes,Summer Peak
+462,Electric usage,07/07/2024,19:30,19:45,1.482,Jul 2024,$0.335,$0.496,Yes,Summer Peak
+463,Electric usage,07/07/2024,19:45,20:00,1.449,Jul 2024,$0.335,$0.485,Yes,Summer Peak
+464,Electric usage,07/07/2024,20:00,20:15,1.218,Jul 2024,$0.335,$0.408,Yes,Summer Peak
+465,Electric usage,07/07/2024,20:15,20:30,1.23,Jul 2024,$0.335,$0.412,Yes,Summer Peak
+466,Electric usage,07/07/2024,20:30,20:45,1.299,Jul 2024,$0.335,$0.435,Yes,Summer Peak
+467,Electric usage,07/07/2024,20:45,21:00,1.287,Jul 2024,$0.335,$0.431,Yes,Summer Peak
+468,Electric usage,07/07/2024,21:00,21:15,1.221,Jul 2024,$0.335,$0.409,Yes,Summer Peak
+469,Electric usage,07/07/2024,21:15,21:30,1.146,Jul 2024,$0.335,$0.384,Yes,Summer Peak
+470,Electric usage,07/07/2024,21:30,21:45,1.098,Jul 2024,$0.335,$0.368,Yes,Summer Peak
+471,Electric usage,07/07/2024,21:45,22:00,1.053,Jul 2024,$0.335,$0.353,Yes,Summer Peak
+472,Electric usage,07/07/2024,22:00,22:15,0.933,Jul 2024,$0.335,$0.313,Yes,Summer Peak
+473,Electric usage,07/07/2024,22:15,22:30,0.948,Jul 2024,$0.335,$0.318,Yes,Summer Peak
+474,Electric usage,07/07/2024,22:30,22:45,0.975,Jul 2024,$0.335,$0.327,Yes,Summer Peak
+475,Electric usage,07/07/2024,22:45,23:00,0.933,Jul 2024,$0.335,$0.313,Yes,Summer Peak
+476,Electric usage,07/07/2024,23:00,23:15,0.924,Jul 2024,$0.335,$0.310,Yes,Summer Peak
+477,Electric usage,07/07/2024,23:15,23:30,0.9,Jul 2024,$0.335,$0.302,Yes,Summer Peak
+478,Electric usage,07/07/2024,23:30,23:45,0.897,Jul 2024,$0.335,$0.300,Yes,Summer Peak
+479,Electric usage,07/07/2024,23:45,00:00,0.912,Jul 2024,$0.335,$0.306,Yes,Summer Peak
+480,Electric usage,07/08/2024,00:00,00:15,0.93,Jul 2024,$0.335,$0.312,Yes,Non-Peak
+481,Electric usage,07/08/2024,00:15,00:30,0.927,Jul 2024,$0.335,$0.311,Yes,Non-Peak
+482,Electric usage,07/08/2024,00:30,00:45,0.969,Jul 2024,$0.335,$0.325,Yes,Non-Peak
+483,Electric usage,07/08/2024,00:45,01:00,0.855,Jul 2024,$0.335,$0.286,Yes,Non-Peak
+484,Electric usage,07/08/2024,01:00,01:15,0.81,Jul 2024,$0.335,$0.271,Yes,Non-Peak
+485,Electric usage,07/08/2024,01:15,01:30,0.861,Jul 2024,$0.335,$0.288,Yes,Non-Peak
+486,Electric usage,07/08/2024,01:30,01:45,0.81,Jul 2024,$0.335,$0.271,Yes,Non-Peak
+487,Electric usage,07/08/2024,01:45,02:00,0.846,Jul 2024,$0.335,$0.283,Yes,Non-Peak
+488,Electric usage,07/08/2024,02:00,02:15,0.831,Jul 2024,$0.335,$0.278,Yes,Non-Peak
+489,Electric usage,07/08/2024,02:15,02:30,0.858,Jul 2024,$0.335,$0.287,Yes,Non-Peak
+490,Electric usage,07/08/2024,02:30,02:45,0.831,Jul 2024,$0.335,$0.278,Yes,Non-Peak
+491,Electric usage,07/08/2024,02:45,03:00,0.804,Jul 2024,$0.335,$0.269,Yes,Non-Peak
+492,Electric usage,07/08/2024,03:00,03:15,0.858,Jul 2024,$0.335,$0.287,Yes,Non-Peak
+493,Electric usage,07/08/2024,03:15,03:30,0.84,Jul 2024,$0.335,$0.281,Yes,Non-Peak
+494,Electric usage,07/08/2024,03:30,03:45,0.834,Jul 2024,$0.335,$0.279,Yes,Non-Peak
+495,Electric usage,07/08/2024,03:45,04:00,0.783,Jul 2024,$0.335,$0.262,Yes,Non-Peak
+496,Electric usage,07/08/2024,04:00,04:15,0.783,Jul 2024,$0.335,$0.262,Yes,Non-Peak
+497,Electric usage,07/08/2024,04:15,04:30,0.774,Jul 2024,$0.335,$0.259,Yes,Non-Peak
+498,Electric usage,07/08/2024,04:30,04:45,0.774,Jul 2024,$0.335,$0.259,Yes,Non-Peak
+499,Electric usage,07/08/2024,04:45,05:00,0.759,Jul 2024,$0.335,$0.254,Yes,Non-Peak
+500,Electric usage,07/08/2024,05:00,05:15,0.771,Jul 2024,$0.335,$0.258,Yes,Non-Peak
+501,Electric usage,07/08/2024,05:15,05:30,0.822,Jul 2024,$0.335,$0.275,Yes,Non-Peak
+502,Electric usage,07/08/2024,05:30,05:45,0.792,Jul 2024,$0.335,$0.265,Yes,Non-Peak
+503,Electric usage,07/08/2024,05:45,06:00,0.534,Jul 2024,$0.335,$0.179,Yes,Non-Peak
+504,Electric usage,07/08/2024,06:00,06:15,0.501,Jul 2024,$0.335,$0.168,Yes,Non-Peak
+505,Electric usage,07/08/2024,06:15,06:30,0.501,Jul 2024,$0.335,$0.168,Yes,Non-Peak
+506,Electric usage,07/08/2024,06:30,06:45,0.273,Jul 2024,$0.335,$0.091,Yes,Non-Peak
+507,Electric usage,07/08/2024,06:45,07:00,0.318,Jul 2024,$0.335,$0.107,Yes,Non-Peak
+508,Electric usage,07/08/2024,07:00,07:15,0.318,Jul 2024,$0.335,$0.107,Yes,Non-Peak
+509,Electric usage,07/08/2024,07:15,07:30,0.339,Jul 2024,$0.335,$0.114,Yes,Non-Peak
+510,Electric usage,07/08/2024,07:30,07:45,0.375,Jul 2024,$0.335,$0.126,Yes,Non-Peak
+511,Electric usage,07/08/2024,07:45,08:00,0.606,Jul 2024,$0.335,$0.203,Yes,Non-Peak
+512,Electric usage,07/08/2024,08:00,08:15,0.594,Jul 2024,$0.335,$0.199,Yes,Summer Peak
+513,Electric usage,07/08/2024,08:15,08:30,0.39,Jul 2024,$0.335,$0.131,Yes,Summer Peak
+514,Electric usage,07/08/2024,08:30,08:45,0.42,Jul 2024,$0.335,$0.141,Yes,Summer Peak
+515,Electric usage,07/08/2024,08:45,09:00,0.387,Jul 2024,$0.335,$0.130,Yes,Summer Peak
+516,Electric usage,07/08/2024,09:00,09:15,0.339,Jul 2024,$0.335,$0.114,Yes,Summer Peak
+517,Electric usage,07/08/2024,09:15,09:30,0.822,Jul 2024,$0.335,$0.275,Yes,Summer Peak
+518,Electric usage,07/08/2024,09:30,09:45,1.128,Jul 2024,$0.335,$0.378,Yes,Summer Peak
+519,Electric usage,07/08/2024,09:45,10:00,0.864,Jul 2024,$0.335,$0.289,Yes,Summer Peak
+520,Electric usage,07/08/2024,10:00,10:15,0.48,Jul 2024,$0.335,$0.161,Yes,Summer Peak
+521,Electric usage,07/08/2024,10:15,10:30,0.606,Jul 2024,$0.335,$0.203,Yes,Summer Peak
+522,Electric usage,07/08/2024,10:30,10:45,1.056,Jul 2024,$0.335,$0.354,Yes,Summer Peak
+523,Electric usage,07/08/2024,10:45,11:00,1.038,Jul 2024,$0.335,$0.348,Yes,Summer Peak
+524,Electric usage,07/08/2024,11:00,11:15,0.642,Jul 2024,$0.335,$0.215,Yes,Summer Peak
+525,Electric usage,07/08/2024,11:15,11:30,0.354,Jul 2024,$0.335,$0.119,Yes,Summer Peak
+526,Electric usage,07/08/2024,11:30,11:45,0.639,Jul 2024,$0.335,$0.214,Yes,Summer Peak
+527,Electric usage,07/08/2024,11:45,12:00,0.999,Jul 2024,$0.335,$0.335,Yes,Summer Peak
+528,Electric usage,07/08/2024,12:00,12:15,0.99,Jul 2024,$0.335,$0.332,Yes,Summer Peak
+529,Electric usage,07/08/2024,12:15,12:30,0.93,Jul 2024,$0.335,$0.312,Yes,Summer Peak
+530,Electric usage,07/08/2024,12:30,12:45,0.672,Jul 2024,$0.335,$0.225,Yes,Summer Peak
+531,Electric usage,07/08/2024,12:45,13:00,0.927,Jul 2024,$0.335,$0.311,Yes,Summer Peak
+532,Electric usage,07/08/2024,13:00,13:15,1.293,Jul 2024,$0.335,$0.433,Yes,Summer Peak
+533,Electric usage,07/08/2024,13:15,13:30,1.539,Jul 2024,$0.335,$0.516,Yes,Summer Peak
+534,Electric usage,07/08/2024,13:30,13:45,1.284,Jul 2024,$0.335,$0.430,Yes,Summer Peak
+535,Electric usage,07/08/2024,13:45,14:00,0.597,Jul 2024,$0.335,$0.200,Yes,Summer Peak
+536,Electric usage,07/08/2024,14:00,14:15,0.594,Jul 2024,$0.335,$0.199,Yes,Super Peak
+537,Electric usage,07/08/2024,14:15,14:30,1.221,Jul 2024,$0.335,$0.409,Yes,Super Peak
+538,Electric usage,07/08/2024,14:30,14:45,1.044,Jul 2024,$0.335,$0.350,Yes,Super Peak
+539,Electric usage,07/08/2024,14:45,15:00,0.81,Jul 2024,$0.335,$0.271,Yes,Super Peak
+540,Electric usage,07/08/2024,15:00,15:15,1.335,Jul 2024,$0.335,$0.447,Yes,Super Peak
+541,Electric usage,07/08/2024,15:15,15:30,1.341,Jul 2024,$0.335,$0.449,Yes,Super Peak
+542,Electric usage,07/08/2024,15:30,15:45,1.308,Jul 2024,$0.335,$0.438,Yes,Super Peak
+543,Electric usage,07/08/2024,15:45,16:00,1.284,Jul 2024,$0.335,$0.430,Yes,Super Peak
+544,Electric usage,07/08/2024,16:00,16:15,1.383,Jul 2024,$0.335,$0.463,Yes,Super Peak
+545,Electric usage,07/08/2024,16:15,16:30,1.344,Jul 2024,$0.335,$0.450,Yes,Super Peak
+546,Electric usage,07/08/2024,16:30,16:45,1.197,Jul 2024,$0.335,$0.401,Yes,Super Peak
+547,Electric usage,07/08/2024,16:45,17:00,0.714,Jul 2024,$0.335,$0.239,Yes,Super Peak
+548,Electric usage,07/08/2024,17:00,17:15,0.735,Jul 2024,$0.335,$0.246,Yes,Super Peak
+549,Electric usage,07/08/2024,17:15,17:30,1.479,Jul 2024,$0.335,$0.495,Yes,Super Peak
+550,Electric usage,07/08/2024,17:30,17:45,1.599,Jul 2024,$0.335,$0.536,Yes,Super Peak
+551,Electric usage,07/08/2024,17:45,18:00,1.455,Jul 2024,$0.335,$0.487,Yes,Super Peak
+552,Electric usage,07/08/2024,18:00,18:15,1.41,Jul 2024,$0.335,$0.472,Yes,Summer Peak
+553,Electric usage,07/08/2024,18:15,18:30,1.23,Jul 2024,$0.335,$0.412,Yes,Summer Peak
+554,Electric usage,07/08/2024,18:30,18:45,0.648,Jul 2024,$0.335,$0.217,Yes,Summer Peak
+555,Electric usage,07/08/2024,18:45,19:00,0.888,Jul 2024,$0.335,$0.297,Yes,Summer Peak
+556,Electric usage,07/08/2024,19:00,19:15,1.452,Jul 2024,$0.335,$0.486,Yes,Summer Peak
+557,Electric usage,07/08/2024,19:15,19:30,1.425,Jul 2024,$0.335,$0.477,Yes,Summer Peak
+558,Electric usage,07/08/2024,19:30,19:45,1.464,Jul 2024,$0.335,$0.490,Yes,Summer Peak
+559,Electric usage,07/08/2024,19:45,20:00,1.482,Jul 2024,$0.335,$0.496,Yes,Summer Peak
+560,Electric usage,07/08/2024,20:00,20:15,0.597,Jul 2024,$0.335,$0.200,Yes,Summer Peak
+561,Electric usage,07/08/2024,20:15,20:30,0.726,Jul 2024,$0.335,$0.243,Yes,Summer Peak
+562,Electric usage,07/08/2024,20:30,20:45,0.612,Jul 2024,$0.335,$0.205,Yes,Summer Peak
+563,Electric usage,07/08/2024,20:45,21:00,1.185,Jul 2024,$0.335,$0.397,Yes,Summer Peak
+564,Electric usage,07/08/2024,21:00,21:15,1.296,Jul 2024,$0.335,$0.434,Yes,Summer Peak
+565,Electric usage,07/08/2024,21:15,21:30,1.209,Jul 2024,$0.335,$0.405,Yes,Summer Peak
+566,Electric usage,07/08/2024,21:30,21:45,1.125,Jul 2024,$0.335,$0.377,Yes,Summer Peak
+567,Electric usage,07/08/2024,21:45,22:00,1.158,Jul 2024,$0.335,$0.388,Yes,Summer Peak
+568,Electric usage,07/08/2024,22:00,22:15,1.101,Jul 2024,$0.335,$0.369,Yes,Summer Peak
+569,Electric usage,07/08/2024,22:15,22:30,1.038,Jul 2024,$0.335,$0.348,Yes,Summer Peak
+570,Electric usage,07/08/2024,22:30,22:45,0.831,Jul 2024,$0.335,$0.278,Yes,Summer Peak
+571,Electric usage,07/08/2024,22:45,23:00,0.372,Jul 2024,$0.335,$0.125,Yes,Summer Peak
+572,Electric usage,07/08/2024,23:00,23:15,0.921,Jul 2024,$0.335,$0.309,Yes,Summer Peak
+573,Electric usage,07/08/2024,23:15,23:30,0.894,Jul 2024,$0.335,$0.299,Yes,Summer Peak
+574,Electric usage,07/08/2024,23:30,23:45,0.936,Jul 2024,$0.335,$0.314,Yes,Summer Peak
+575,Electric usage,07/08/2024,23:45,00:00,0.942,Jul 2024,$0.335,$0.316,Yes,Summer Peak
+576,Electric usage,07/10/2024,00:00,00:15,0.933,Jul 2024,$0.335,$0.313,Yes,Non-Peak
+577,Electric usage,07/10/2024,00:15,00:30,1.164,Jul 2024,$0.335,$0.390,Yes,Non-Peak
+578,Electric usage,07/10/2024,00:30,00:45,0.969,Jul 2024,$0.335,$0.325,Yes,Non-Peak
+579,Electric usage,07/10/2024,00:45,01:00,0.906,Jul 2024,$0.335,$0.304,Yes,Non-Peak
+580,Electric usage,07/10/2024,01:00,01:15,0.9,Jul 2024,$0.335,$0.302,Yes,Non-Peak
+581,Electric usage,07/10/2024,01:15,01:30,0.99,Jul 2024,$0.335,$0.332,Yes,Non-Peak
+582,Electric usage,07/10/2024,01:30,01:45,0.9,Jul 2024,$0.335,$0.302,Yes,Non-Peak
+583,Electric usage,07/10/2024,01:45,02:00,0.849,Jul 2024,$0.335,$0.284,Yes,Non-Peak
+584,Electric usage,07/10/2024,02:00,02:15,0.852,Jul 2024,$0.335,$0.285,Yes,Non-Peak
+585,Electric usage,07/10/2024,02:15,02:30,0.804,Jul 2024,$0.335,$0.269,Yes,Non-Peak
+586,Electric usage,07/10/2024,02:30,02:45,0.24,Jul 2024,$0.335,$0.080,Yes,Non-Peak
+587,Electric usage,07/10/2024,02:45,03:00,0.261,Jul 2024,$0.335,$0.087,Yes,Non-Peak
+588,Electric usage,07/10/2024,03:00,03:15,0.264,Jul 2024,$0.335,$0.088,Yes,Non-Peak
+589,Electric usage,07/10/2024,03:15,03:30,0.534,Jul 2024,$0.335,$0.179,Yes,Non-Peak
+590,Electric usage,07/10/2024,03:30,03:45,0.861,Jul 2024,$0.335,$0.288,Yes,Non-Peak
+591,Electric usage,07/10/2024,03:45,04:00,0.816,Jul 2024,$0.335,$0.273,Yes,Non-Peak
+592,Electric usage,07/10/2024,04:00,04:15,0.804,Jul 2024,$0.335,$0.269,Yes,Non-Peak
+593,Electric usage,07/10/2024,04:15,04:30,0.789,Jul 2024,$0.335,$0.264,Yes,Non-Peak
+594,Electric usage,07/10/2024,04:30,04:45,0.567,Jul 2024,$0.335,$0.190,Yes,Non-Peak
+595,Electric usage,07/10/2024,04:45,05:00,0.24,Jul 2024,$0.335,$0.080,Yes,Non-Peak
+596,Electric usage,07/10/2024,05:00,05:15,0.252,Jul 2024,$0.335,$0.084,Yes,Non-Peak
+597,Electric usage,07/10/2024,05:15,05:30,0.222,Jul 2024,$0.335,$0.074,Yes,Non-Peak
+598,Electric usage,07/10/2024,05:30,05:45,0.207,Jul 2024,$0.335,$0.069,Yes,Non-Peak
+599,Electric usage,07/10/2024,05:45,06:00,0.654,Jul 2024,$0.335,$0.219,Yes,Non-Peak
+600,Electric usage,07/10/2024,06:00,06:15,0.888,Jul 2024,$0.335,$0.297,Yes,Non-Peak
+601,Electric usage,07/10/2024,06:15,06:30,0.855,Jul 2024,$0.335,$0.286,Yes,Non-Peak
+602,Electric usage,07/10/2024,06:30,06:45,0.318,Jul 2024,$0.335,$0.107,Yes,Non-Peak
+603,Electric usage,07/10/2024,06:45,07:00,0.306,Jul 2024,$0.335,$0.103,Yes,Non-Peak
+604,Electric usage,07/10/2024,07:00,07:15,0.363,Jul 2024,$0.335,$0.122,Yes,Non-Peak
+605,Electric usage,07/10/2024,07:15,07:30,0.342,Jul 2024,$0.335,$0.115,Yes,Non-Peak
+606,Electric usage,07/10/2024,07:30,07:45,0.483,Jul 2024,$0.335,$0.162,Yes,Non-Peak
+607,Electric usage,07/10/2024,07:45,08:00,0.84,Jul 2024,$0.335,$0.281,Yes,Non-Peak
+608,Electric usage,07/10/2024,08:00,08:15,0.732,Jul 2024,$0.335,$0.245,Yes,Summer Peak
+609,Electric usage,07/10/2024,08:15,08:30,0.441,Jul 2024,$0.335,$0.148,Yes,Summer Peak
+610,Electric usage,07/10/2024,08:30,08:45,0.36,Jul 2024,$0.335,$0.121,Yes,Summer Peak
+611,Electric usage,07/10/2024,08:45,09:00,0.522,Jul 2024,$0.335,$0.175,Yes,Summer Peak
+612,Electric usage,07/10/2024,09:00,09:15,0.39,Jul 2024,$0.335,$0.131,Yes,Summer Peak
+613,Electric usage,07/10/2024,09:15,09:30,1.443,Jul 2024,$0.335,$0.483,Yes,Summer Peak
+614,Electric usage,07/10/2024,09:30,09:45,1.446,Jul 2024,$0.335,$0.484,Yes,Summer Peak
+615,Electric usage,07/10/2024,09:45,10:00,1.158,Jul 2024,$0.335,$0.388,Yes,Summer Peak
+616,Electric usage,07/10/2024,10:00,10:15,0.732,Jul 2024,$0.335,$0.245,Yes,Summer Peak
+617,Electric usage,07/10/2024,10:15,10:30,0.876,Jul 2024,$0.335,$0.293,Yes,Summer Peak
+618,Electric usage,07/10/2024,10:30,10:45,1.443,Jul 2024,$0.335,$0.483,Yes,Summer Peak
+619,Electric usage,07/10/2024,10:45,11:00,1.38,Jul 2024,$0.335,$0.462,Yes,Summer Peak
+620,Electric usage,07/10/2024,11:00,11:15,0.762,Jul 2024,$0.335,$0.255,Yes,Summer Peak
+621,Electric usage,07/10/2024,11:15,11:30,0.81,Jul 2024,$0.335,$0.271,Yes,Summer Peak
+622,Electric usage,07/10/2024,11:30,11:45,0.858,Jul 2024,$0.335,$0.287,Yes,Summer Peak
+623,Electric usage,07/10/2024,11:45,12:00,1.428,Jul 2024,$0.335,$0.478,Yes,Summer Peak
+624,Electric usage,07/10/2024,12:00,12:15,1.344,Jul 2024,$0.335,$0.450,Yes,Summer Peak
+625,Electric usage,07/10/2024,12:15,12:30,0.843,Jul 2024,$0.335,$0.282,Yes,Summer Peak
+626,Electric usage,07/10/2024,12:30,12:45,0.432,Jul 2024,$0.335,$0.145,Yes,Summer Peak
+627,Electric usage,07/10/2024,12:45,13:00,0.939,Jul 2024,$0.335,$0.315,Yes,Summer Peak
+628,Electric usage,07/10/2024,13:00,13:15,1.236,Jul 2024,$0.335,$0.414,Yes,Summer Peak
+629,Electric usage,07/10/2024,13:15,13:30,1.182,Jul 2024,$0.335,$0.396,Yes,Summer Peak
+630,Electric usage,07/10/2024,13:30,13:45,0.723,Jul 2024,$0.335,$0.242,Yes,Summer Peak
+631,Electric usage,07/10/2024,13:45,14:00,0.633,Jul 2024,$0.335,$0.212,Yes,Summer Peak
+632,Electric usage,07/10/2024,14:00,14:15,0.696,Jul 2024,$0.335,$0.233,Yes,Super Peak
+633,Electric usage,07/10/2024,14:15,14:30,0.504,Jul 2024,$0.335,$0.169,Yes,Super Peak
+634,Electric usage,07/10/2024,14:30,14:45,1.026,Jul 2024,$0.335,$0.344,Yes,Super Peak
+635,Electric usage,07/10/2024,14:45,15:00,1.596,Jul 2024,$0.335,$0.535,Yes,Super Peak
+636,Electric usage,07/10/2024,15:00,15:15,1.68,Jul 2024,$0.335,$0.563,Yes,Super Peak
+637,Electric usage,07/10/2024,15:15,15:30,1.602,Jul 2024,$0.335,$0.537,Yes,Super Peak
+638,Electric usage,07/10/2024,15:30,15:45,1.272,Jul 2024,$0.335,$0.426,Yes,Super Peak
+639,Electric usage,07/10/2024,15:45,16:00,0.687,Jul 2024,$0.335,$0.230,Yes,Super Peak
+640,Electric usage,07/10/2024,16:00,16:15,0.615,Jul 2024,$0.335,$0.206,Yes,Super Peak
+641,Electric usage,07/10/2024,16:15,16:30,0.774,Jul 2024,$0.335,$0.259,Yes,Super Peak
+642,Electric usage,07/10/2024,16:30,16:45,0.96,Jul 2024,$0.335,$0.322,Yes,Super Peak
+643,Electric usage,07/10/2024,16:45,17:00,1.566,Jul 2024,$0.335,$0.525,Yes,Super Peak
+644,Electric usage,07/10/2024,17:00,17:15,1.509,Jul 2024,$0.335,$0.506,Yes,Super Peak
+645,Electric usage,07/10/2024,17:15,17:30,1.572,Jul 2024,$0.335,$0.527,Yes,Super Peak
+646,Electric usage,07/10/2024,17:30,17:45,1.257,Jul 2024,$0.335,$0.421,Yes,Super Peak
+647,Electric usage,07/10/2024,17:45,18:00,0.852,Jul 2024,$0.335,$0.285,Yes,Super Peak
+648,Electric usage,07/10/2024,18:00,18:15,0.897,Jul 2024,$0.335,$0.300,Yes,Summer Peak
+649,Electric usage,07/10/2024,18:15,18:30,1.098,Jul 2024,$0.335,$0.368,Yes,Summer Peak
+650,Electric usage,07/10/2024,18:30,18:45,1.683,Jul 2024,$0.335,$0.564,Yes,Summer Peak
+651,Electric usage,07/10/2024,18:45,19:00,1.539,Jul 2024,$0.335,$0.516,Yes,Summer Peak
+652,Electric usage,07/10/2024,19:00,19:15,1.284,Jul 2024,$0.335,$0.430,Yes,Summer Peak
+653,Electric usage,07/10/2024,19:15,19:30,1.221,Jul 2024,$0.335,$0.409,Yes,Summer Peak
+654,Electric usage,07/10/2024,19:30,19:45,0.741,Jul 2024,$0.335,$0.248,Yes,Summer Peak
+655,Electric usage,07/10/2024,19:45,20:00,0.834,Jul 2024,$0.335,$0.279,Yes,Summer Peak
+656,Electric usage,07/10/2024,20:00,20:15,0.522,Jul 2024,$0.335,$0.175,Yes,Summer Peak
+657,Electric usage,07/10/2024,20:15,20:30,0.54,Jul 2024,$0.335,$0.181,Yes,Summer Peak
+658,Electric usage,07/10/2024,20:30,20:45,0.513,Jul 2024,$0.335,$0.172,Yes,Summer Peak
+659,Electric usage,07/10/2024,20:45,21:00,1.095,Jul 2024,$0.335,$0.367,Yes,Summer Peak
+660,Electric usage,07/10/2024,21:00,21:15,0.39,Jul 2024,$0.335,$0.131,Yes,Summer Peak
+661,Electric usage,07/10/2024,21:15,21:30,0.402,Jul 2024,$0.335,$0.135,Yes,Summer Peak
+662,Electric usage,07/10/2024,21:30,21:45,0.957,Jul 2024,$0.335,$0.321,Yes,Summer Peak
+663,Electric usage,07/10/2024,21:45,22:00,1.131,Jul 2024,$0.335,$0.379,Yes,Summer Peak
+664,Electric usage,07/10/2024,22:00,22:15,1.128,Jul 2024,$0.335,$0.378,Yes,Summer Peak
+665,Electric usage,07/10/2024,22:15,22:30,1.068,Jul 2024,$0.335,$0.358,Yes,Summer Peak
+666,Electric usage,07/10/2024,22:30,22:45,0.672,Jul 2024,$0.335,$0.225,Yes,Summer Peak
+667,Electric usage,07/10/2024,22:45,23:00,0.351,Jul 2024,$0.335,$0.118,Yes,Summer Peak
+668,Electric usage,07/10/2024,23:00,23:15,0.381,Jul 2024,$0.335,$0.128,Yes,Summer Peak
+669,Electric usage,07/10/2024,23:15,23:30,0.612,Jul 2024,$0.335,$0.205,Yes,Summer Peak
+670,Electric usage,07/10/2024,23:30,23:45,0.831,Jul 2024,$0.335,$0.278,Yes,Summer Peak
+671,Electric usage,07/10/2024,23:45,00:00,0.804,Jul 2024,$0.335,$0.269,Yes,Summer Peak
+672,Electric usage,07/11/2024,00:00,00:15,0.843,Jul 2024,$0.335,$0.282,Yes,Non-Peak
+673,Electric usage,07/11/2024,00:15,00:30,0.882,Jul 2024,$0.335,$0.295,Yes,Non-Peak
+674,Electric usage,07/11/2024,00:30,00:45,0.867,Jul 2024,$0.335,$0.290,Yes,Non-Peak
+675,Electric usage,07/11/2024,00:45,01:00,0.849,Jul 2024,$0.335,$0.284,Yes,Non-Peak
+676,Electric usage,07/11/2024,01:00,01:15,0.9,Jul 2024,$0.335,$0.302,Yes,Non-Peak
+677,Electric usage,07/11/2024,01:15,01:30,0.294,Jul 2024,$0.335,$0.098,Yes,Non-Peak
+678,Electric usage,07/11/2024,01:30,01:45,0.324,Jul 2024,$0.335,$0.109,Yes,Non-Peak
+679,Electric usage,07/11/2024,01:45,02:00,0.312,Jul 2024,$0.335,$0.105,Yes,Non-Peak
+680,Electric usage,07/11/2024,02:00,02:15,0.804,Jul 2024,$0.335,$0.269,Yes,Non-Peak
+681,Electric usage,07/11/2024,02:15,02:30,0.918,Jul 2024,$0.335,$0.308,Yes,Non-Peak
+682,Electric usage,07/11/2024,02:30,02:45,0.84,Jul 2024,$0.335,$0.281,Yes,Non-Peak
+683,Electric usage,07/11/2024,02:45,03:00,0.297,Jul 2024,$0.335,$0.099,Yes,Non-Peak
+684,Electric usage,07/11/2024,03:00,03:15,0.249,Jul 2024,$0.335,$0.083,Yes,Non-Peak
+685,Electric usage,07/11/2024,03:15,03:30,0.261,Jul 2024,$0.335,$0.087,Yes,Non-Peak
+686,Electric usage,07/11/2024,03:30,03:45,0.57,Jul 2024,$0.335,$0.191,Yes,Non-Peak
+687,Electric usage,07/11/2024,03:45,04:00,0.87,Jul 2024,$0.335,$0.291,Yes,Non-Peak
+688,Electric usage,07/11/2024,04:00,04:15,0.855,Jul 2024,$0.335,$0.286,Yes,Non-Peak
+689,Electric usage,07/11/2024,04:15,04:30,0.888,Jul 2024,$0.335,$0.297,Yes,Non-Peak
+690,Electric usage,07/11/2024,04:30,04:45,0.33,Jul 2024,$0.335,$0.111,Yes,Non-Peak
+691,Electric usage,07/11/2024,04:45,05:00,0.255,Jul 2024,$0.335,$0.085,Yes,Non-Peak
+692,Electric usage,07/11/2024,05:00,05:15,0.312,Jul 2024,$0.335,$0.105,Yes,Non-Peak
+693,Electric usage,07/11/2024,05:15,05:30,0.279,Jul 2024,$0.335,$0.093,Yes,Non-Peak
+694,Electric usage,07/11/2024,05:30,05:45,0.321,Jul 2024,$0.335,$0.108,Yes,Non-Peak
+695,Electric usage,07/11/2024,05:45,06:00,0.741,Jul 2024,$0.335,$0.248,Yes,Non-Peak
+696,Electric usage,07/11/2024,06:00,06:15,1.134,Jul 2024,$0.335,$0.380,Yes,Non-Peak
+697,Electric usage,07/11/2024,06:15,06:30,0.966,Jul 2024,$0.335,$0.324,Yes,Non-Peak
+698,Electric usage,07/11/2024,06:30,06:45,0.393,Jul 2024,$0.335,$0.132,Yes,Non-Peak
+699,Electric usage,07/11/2024,06:45,07:00,0.363,Jul 2024,$0.335,$0.122,Yes,Non-Peak
+700,Electric usage,07/11/2024,07:00,07:15,0.411,Jul 2024,$0.335,$0.138,Yes,Non-Peak
+701,Electric usage,07/11/2024,07:15,07:30,0.363,Jul 2024,$0.335,$0.122,Yes,Non-Peak
+702,Electric usage,07/11/2024,07:30,07:45,0.456,Jul 2024,$0.335,$0.153,Yes,Non-Peak
+703,Electric usage,07/11/2024,07:45,08:00,0.744,Jul 2024,$0.335,$0.249,Yes,Non-Peak
+704,Electric usage,07/11/2024,08:00,08:15,0.783,Jul 2024,$0.335,$0.262,Yes,Summer Peak
+705,Electric usage,07/11/2024,08:15,08:30,0.54,Jul 2024,$0.335,$0.181,Yes,Summer Peak
+706,Electric usage,07/11/2024,08:30,08:45,1.08,Jul 2024,$0.335,$0.362,Yes,Summer Peak
+707,Electric usage,07/11/2024,08:45,09:00,1.581,Jul 2024,$0.335,$0.530,Yes,Summer Peak
+708,Electric usage,07/11/2024,09:00,09:15,0.648,Jul 2024,$0.335,$0.217,Yes,Summer Peak
+709,Electric usage,07/11/2024,09:15,09:30,0.747,Jul 2024,$0.335,$0.250,Yes,Summer Peak
+710,Electric usage,07/11/2024,09:30,09:45,0.702,Jul 2024,$0.335,$0.235,Yes,Summer Peak
+711,Electric usage,07/11/2024,09:45,10:00,0.771,Jul 2024,$0.335,$0.258,Yes,Summer Peak
+712,Electric usage,07/11/2024,10:00,10:15,0.663,Jul 2024,$0.335,$0.222,Yes,Summer Peak
+713,Electric usage,07/11/2024,10:15,10:30,0.639,Jul 2024,$0.335,$0.214,Yes,Summer Peak
+714,Electric usage,07/11/2024,10:30,10:45,0.84,Jul 2024,$0.335,$0.281,Yes,Summer Peak
+715,Electric usage,07/11/2024,10:45,11:00,1.335,Jul 2024,$0.335,$0.447,Yes,Summer Peak
+716,Electric usage,07/11/2024,11:00,11:15,1.239,Jul 2024,$0.335,$0.415,Yes,Summer Peak
+717,Electric usage,07/11/2024,11:15,11:30,0.645,Jul 2024,$0.335,$0.216,Yes,Summer Peak
+718,Electric usage,07/11/2024,11:30,11:45,0.432,Jul 2024,$0.335,$0.145,Yes,Summer Peak
+719,Electric usage,07/11/2024,11:45,12:00,1.23,Jul 2024,$0.335,$0.412,Yes,Summer Peak
+720,Electric usage,07/11/2024,12:00,12:15,1.293,Jul 2024,$0.335,$0.433,Yes,Summer Peak
+721,Electric usage,07/11/2024,12:15,12:30,1.356,Jul 2024,$0.335,$0.454,Yes,Summer Peak
+722,Electric usage,07/11/2024,12:30,12:45,0.435,Jul 2024,$0.335,$0.146,Yes,Summer Peak
+723,Electric usage,07/11/2024,12:45,13:00,0.519,Jul 2024,$0.335,$0.174,Yes,Summer Peak
+724,Electric usage,07/11/2024,13:00,13:15,1.005,Jul 2024,$0.335,$0.337,Yes,Summer Peak
+725,Electric usage,07/11/2024,13:15,13:30,1.086,Jul 2024,$0.335,$0.364,Yes,Summer Peak
+726,Electric usage,07/11/2024,13:30,13:45,1.014,Jul 2024,$0.335,$0.340,Yes,Summer Peak
+727,Electric usage,07/11/2024,13:45,14:00,0.534,Jul 2024,$0.335,$0.179,Yes,Summer Peak
+728,Electric usage,07/11/2024,14:00,14:15,0.489,Jul 2024,$0.335,$0.164,Yes,Super Peak
+729,Electric usage,07/11/2024,14:15,14:30,1.059,Jul 2024,$0.335,$0.355,Yes,Super Peak
+730,Electric usage,07/11/2024,14:30,14:45,1.284,Jul 2024,$0.335,$0.430,Yes,Super Peak
+731,Electric usage,07/11/2024,14:45,15:00,1.128,Jul 2024,$0.335,$0.378,Yes,Super Peak
+732,Electric usage,07/11/2024,15:00,15:15,0.381,Jul 2024,$0.335,$0.128,Yes,Super Peak
+733,Electric usage,07/11/2024,15:15,15:30,0.735,Jul 2024,$0.335,$0.246,Yes,Super Peak
+734,Electric usage,07/11/2024,15:30,15:45,0.786,Jul 2024,$0.335,$0.263,Yes,Super Peak
+735,Electric usage,07/11/2024,15:45,16:00,1.176,Jul 2024,$0.335,$0.394,Yes,Super Peak
+736,Electric usage,07/11/2024,16:00,16:15,1.431,Jul 2024,$0.335,$0.479,Yes,Super Peak
+737,Electric usage,07/11/2024,16:15,16:30,0.657,Jul 2024,$0.335,$0.220,Yes,Super Peak
+738,Electric usage,07/11/2024,16:30,16:45,0.426,Jul 2024,$0.335,$0.143,Yes,Super Peak
+739,Electric usage,07/11/2024,16:45,17:00,0.66,Jul 2024,$0.335,$0.221,Yes,Super Peak
+740,Electric usage,07/11/2024,17:00,17:15,1.134,Jul 2024,$0.335,$0.380,Yes,Super Peak
+741,Electric usage,07/11/2024,17:15,17:30,1.206,Jul 2024,$0.335,$0.404,Yes,Super Peak
+742,Electric usage,07/11/2024,17:30,17:45,1.197,Jul 2024,$0.335,$0.401,Yes,Super Peak
+743,Electric usage,07/11/2024,17:45,18:00,0.87,Jul 2024,$0.335,$0.291,Yes,Super Peak
+744,Electric usage,07/11/2024,18:00,18:15,0.594,Jul 2024,$0.335,$0.199,Yes,Summer Peak
+745,Electric usage,07/11/2024,18:15,18:30,0.63,Jul 2024,$0.335,$0.211,Yes,Summer Peak
+746,Electric usage,07/11/2024,18:30,18:45,0.597,Jul 2024,$0.335,$0.200,Yes,Summer Peak
+747,Electric usage,07/11/2024,18:45,19:00,0.765,Jul 2024,$0.335,$0.256,Yes,Summer Peak
+748,Electric usage,07/11/2024,19:00,19:15,1.122,Jul 2024,$0.335,$0.376,Yes,Summer Peak
+749,Electric usage,07/11/2024,19:15,19:30,1.473,Jul 2024,$0.335,$0.493,Yes,Summer Peak
+750,Electric usage,07/11/2024,19:30,19:45,0.753,Jul 2024,$0.335,$0.252,Yes,Summer Peak
+751,Electric usage,07/11/2024,19:45,20:00,0.687,Jul 2024,$0.335,$0.230,Yes,Summer Peak
+752,Electric usage,07/11/2024,20:00,20:15,1.191,Jul 2024,$0.335,$0.399,Yes,Summer Peak
+753,Electric usage,07/11/2024,20:15,20:30,1.155,Jul 2024,$0.335,$0.387,Yes,Summer Peak
+754,Electric usage,07/11/2024,20:30,20:45,1.239,Jul 2024,$0.335,$0.415,Yes,Summer Peak
+755,Electric usage,07/11/2024,20:45,21:00,0.531,Jul 2024,$0.335,$0.178,Yes,Summer Peak
+756,Electric usage,07/11/2024,21:00,21:15,0.498,Jul 2024,$0.335,$0.167,Yes,Summer Peak
+757,Electric usage,07/11/2024,21:15,21:30,0.579,Jul 2024,$0.335,$0.194,Yes,Summer Peak
+758,Electric usage,07/11/2024,21:30,21:45,1.083,Jul 2024,$0.335,$0.363,Yes,Summer Peak
+759,Electric usage,07/11/2024,21:45,22:00,1.224,Jul 2024,$0.335,$0.410,Yes,Summer Peak
+760,Electric usage,07/11/2024,22:00,22:15,1.113,Jul 2024,$0.335,$0.373,Yes,Summer Peak
+761,Electric usage,07/11/2024,22:15,22:30,1.47,Jul 2024,$0.335,$0.492,Yes,Summer Peak
+762,Electric usage,07/11/2024,22:30,22:45,1.254,Jul 2024,$0.335,$0.420,Yes,Summer Peak
+763,Electric usage,07/11/2024,22:45,23:00,1.248,Jul 2024,$0.335,$0.418,Yes,Summer Peak
+764,Electric usage,07/11/2024,23:00,23:15,1.332,Jul 2024,$0.335,$0.446,Yes,Summer Peak
+765,Electric usage,07/11/2024,23:15,23:30,1.11,Jul 2024,$0.335,$0.372,Yes,Summer Peak
+766,Electric usage,07/11/2024,23:30,23:45,0.867,Jul 2024,$0.335,$0.290,Yes,Summer Peak
+767,Electric usage,07/11/2024,23:45,00:00,0.882,Jul 2024,$0.335,$0.295,Yes,Summer Peak
+768,Electric usage,07/15/2024,00:00,00:15,0.843,Jul 2024,$0.335,$0.282,Yes,Non-Peak
+769,Electric usage,07/15/2024,00:15,00:30,0.81,Jul 2024,$0.335,$0.271,Yes,Non-Peak
+770,Electric usage,07/15/2024,00:30,00:45,0.813,Jul 2024,$0.335,$0.272,Yes,Non-Peak
+771,Electric usage,07/15/2024,00:45,01:00,0.345,Jul 2024,$0.335,$0.116,Yes,Non-Peak
+772,Electric usage,07/15/2024,01:00,01:15,0.222,Jul 2024,$0.335,$0.074,Yes,Non-Peak
+773,Electric usage,07/15/2024,01:15,01:30,0.171,Jul 2024,$0.335,$0.057,Yes,Non-Peak
+774,Electric usage,07/15/2024,01:30,01:45,0.228,Jul 2024,$0.335,$0.076,Yes,Non-Peak
+775,Electric usage,07/15/2024,01:45,02:00,0.3,Jul 2024,$0.335,$0.101,Yes,Non-Peak
+776,Electric usage,07/15/2024,02:00,02:15,0.798,Jul 2024,$0.335,$0.267,Yes,Non-Peak
+777,Electric usage,07/15/2024,02:15,02:30,0.9,Jul 2024,$0.335,$0.302,Yes,Non-Peak
+778,Electric usage,07/15/2024,02:30,02:45,0.915,Jul 2024,$0.335,$0.307,Yes,Non-Peak
+779,Electric usage,07/15/2024,02:45,03:00,0.801,Jul 2024,$0.335,$0.268,Yes,Non-Peak
+780,Electric usage,07/15/2024,03:00,03:15,0.348,Jul 2024,$0.335,$0.117,Yes,Non-Peak
+781,Electric usage,07/15/2024,03:15,03:30,0.246,Jul 2024,$0.335,$0.082,Yes,Non-Peak
+782,Electric usage,07/15/2024,03:30,03:45,0.189,Jul 2024,$0.335,$0.063,Yes,Non-Peak
+783,Electric usage,07/15/2024,03:45,04:00,0.21,Jul 2024,$0.335,$0.070,Yes,Non-Peak
+784,Electric usage,07/15/2024,04:00,04:15,0.216,Jul 2024,$0.335,$0.072,Yes,Non-Peak
+785,Electric usage,07/15/2024,04:15,04:30,0.27,Jul 2024,$0.335,$0.090,Yes,Non-Peak
+786,Electric usage,07/15/2024,04:30,04:45,0.747,Jul 2024,$0.335,$0.250,Yes,Non-Peak
+787,Electric usage,07/15/2024,04:45,05:00,0.753,Jul 2024,$0.335,$0.252,Yes,Non-Peak
+788,Electric usage,07/15/2024,05:00,05:15,0.765,Jul 2024,$0.335,$0.256,Yes,Non-Peak
+789,Electric usage,07/15/2024,05:15,05:30,0.774,Jul 2024,$0.335,$0.259,Yes,Non-Peak
+790,Electric usage,07/15/2024,05:30,05:45,0.504,Jul 2024,$0.335,$0.169,Yes,Non-Peak
+791,Electric usage,07/15/2024,05:45,06:00,0.189,Jul 2024,$0.335,$0.063,Yes,Non-Peak
+792,Electric usage,07/15/2024,06:00,06:15,0.252,Jul 2024,$0.335,$0.084,Yes,Non-Peak
+793,Electric usage,07/15/2024,06:15,06:30,0.258,Jul 2024,$0.335,$0.086,Yes,Non-Peak
+794,Electric usage,07/15/2024,06:30,06:45,0.255,Jul 2024,$0.335,$0.085,Yes,Non-Peak
+795,Electric usage,07/15/2024,06:45,07:00,0.21,Jul 2024,$0.335,$0.070,Yes,Non-Peak
+796,Electric usage,07/15/2024,07:00,07:15,0.219,Jul 2024,$0.335,$0.073,Yes,Non-Peak
+797,Electric usage,07/15/2024,07:15,07:30,0.231,Jul 2024,$0.335,$0.077,Yes,Non-Peak
+798,Electric usage,07/15/2024,07:30,07:45,0.243,Jul 2024,$0.335,$0.081,Yes,Non-Peak
+799,Electric usage,07/15/2024,07:45,08:00,0.354,Jul 2024,$0.335,$0.119,Yes,Non-Peak
+800,Electric usage,07/15/2024,08:00,08:15,0.714,Jul 2024,$0.335,$0.239,Yes,Summer Peak
+801,Electric usage,07/15/2024,08:15,08:30,0.384,Jul 2024,$0.335,$0.129,Yes,Summer Peak
+802,Electric usage,07/15/2024,08:30,08:45,0.369,Jul 2024,$0.335,$0.124,Yes,Summer Peak
+803,Electric usage,07/15/2024,08:45,09:00,0.555,Jul 2024,$0.335,$0.186,Yes,Summer Peak
+804,Electric usage,07/15/2024,09:00,09:15,0.693,Jul 2024,$0.335,$0.232,Yes,Summer Peak
+805,Electric usage,07/15/2024,09:15,09:30,0.96,Jul 2024,$0.335,$0.322,Yes,Summer Peak
+806,Electric usage,07/15/2024,09:30,09:45,1.176,Jul 2024,$0.335,$0.394,Yes,Summer Peak
+807,Electric usage,07/15/2024,09:45,10:00,0.798,Jul 2024,$0.335,$0.267,Yes,Summer Peak
+808,Electric usage,07/15/2024,10:00,10:15,0.516,Jul 2024,$0.335,$0.173,Yes,Summer Peak
+809,Electric usage,07/15/2024,10:15,10:30,0.561,Jul 2024,$0.335,$0.188,Yes,Summer Peak
+810,Electric usage,07/15/2024,10:30,10:45,1.143,Jul 2024,$0.335,$0.383,Yes,Summer Peak
+811,Electric usage,07/15/2024,10:45,11:00,1.071,Jul 2024,$0.335,$0.359,Yes,Summer Peak
+812,Electric usage,07/15/2024,11:00,11:15,0.864,Jul 2024,$0.335,$0.289,Yes,Summer Peak
+813,Electric usage,07/15/2024,11:15,11:30,0.444,Jul 2024,$0.335,$0.149,Yes,Summer Peak
+814,Electric usage,07/15/2024,11:30,11:45,0.549,Jul 2024,$0.335,$0.184,Yes,Summer Peak
+815,Electric usage,07/15/2024,11:45,12:00,1.161,Jul 2024,$0.335,$0.389,Yes,Summer Peak
+816,Electric usage,07/15/2024,12:00,12:15,1.125,Jul 2024,$0.335,$0.377,Yes,Summer Peak
+817,Electric usage,07/15/2024,12:15,12:30,1.17,Jul 2024,$0.335,$0.392,Yes,Summer Peak
+818,Electric usage,07/15/2024,12:30,12:45,0.702,Jul 2024,$0.335,$0.235,Yes,Summer Peak
+819,Electric usage,07/15/2024,12:45,13:00,0.54,Jul 2024,$0.335,$0.181,Yes,Summer Peak
+820,Electric usage,07/15/2024,13:00,13:15,0.465,Jul 2024,$0.335,$0.156,Yes,Summer Peak
+821,Electric usage,07/15/2024,13:15,13:30,0.534,Jul 2024,$0.335,$0.179,Yes,Summer Peak
+822,Electric usage,07/15/2024,13:30,13:45,1.155,Jul 2024,$0.335,$0.387,Yes,Summer Peak
+823,Electric usage,07/15/2024,13:45,14:00,1.149,Jul 2024,$0.335,$0.385,Yes,Summer Peak
+824,Electric usage,07/15/2024,14:00,14:15,1.116,Jul 2024,$0.335,$0.374,Yes,Super Peak
+825,Electric usage,07/15/2024,14:15,14:30,0.441,Jul 2024,$0.335,$0.148,Yes,Super Peak
+826,Electric usage,07/15/2024,14:30,14:45,0.459,Jul 2024,$0.335,$0.154,Yes,Super Peak
+827,Electric usage,07/15/2024,14:45,15:00,0.75,Jul 2024,$0.335,$0.251,Yes,Super Peak
+828,Electric usage,07/15/2024,15:00,15:15,1.188,Jul 2024,$0.335,$0.398,Yes,Super Peak
+829,Electric usage,07/15/2024,15:15,15:30,1.203,Jul 2024,$0.335,$0.403,Yes,Super Peak
+830,Electric usage,07/15/2024,15:30,15:45,1.185,Jul 2024,$0.335,$0.397,Yes,Super Peak
+831,Electric usage,07/15/2024,15:45,16:00,1.257,Jul 2024,$0.335,$0.421,Yes,Super Peak
+832,Electric usage,07/15/2024,16:00,16:15,0.579,Jul 2024,$0.335,$0.194,Yes,Super Peak
+833,Electric usage,07/15/2024,16:15,16:30,0.537,Jul 2024,$0.335,$0.180,Yes,Super Peak
+834,Electric usage,07/15/2024,16:30,16:45,0.519,Jul 2024,$0.335,$0.174,Yes,Super Peak
+835,Electric usage,07/15/2024,16:45,17:00,0.507,Jul 2024,$0.335,$0.170,Yes,Super Peak
+836,Electric usage,07/15/2024,17:00,17:15,0.537,Jul 2024,$0.335,$0.180,Yes,Super Peak
+837,Electric usage,07/15/2024,17:15,17:30,0.516,Jul 2024,$0.335,$0.173,Yes,Super Peak
+838,Electric usage,07/15/2024,17:30,17:45,0.768,Jul 2024,$0.335,$0.257,Yes,Super Peak
+839,Electric usage,07/15/2024,17:45,18:00,1.215,Jul 2024,$0.335,$0.407,Yes,Super Peak
+840,Electric usage,07/15/2024,18:00,18:15,1.644,Jul 2024,$0.335,$0.551,Yes,Summer Peak
+841,Electric usage,07/15/2024,18:15,18:30,1.605,Jul 2024,$0.335,$0.538,Yes,Summer Peak
+842,Electric usage,07/15/2024,18:30,18:45,1.419,Jul 2024,$0.335,$0.475,Yes,Summer Peak
+843,Electric usage,07/15/2024,18:45,19:00,1.392,Jul 2024,$0.335,$0.466,Yes,Summer Peak
+844,Electric usage,07/15/2024,19:00,19:15,1.302,Jul 2024,$0.335,$0.436,Yes,Summer Peak
+845,Electric usage,07/15/2024,19:15,19:30,1.218,Jul 2024,$0.335,$0.408,Yes,Summer Peak
+846,Electric usage,07/15/2024,19:30,19:45,0.675,Jul 2024,$0.335,$0.226,Yes,Summer Peak
+847,Electric usage,07/15/2024,19:45,20:00,0.777,Jul 2024,$0.335,$0.260,Yes,Summer Peak
+848,Electric usage,07/15/2024,20:00,20:15,1.194,Jul 2024,$0.335,$0.400,Yes,Summer Peak
+849,Electric usage,07/15/2024,20:15,20:30,1.32,Jul 2024,$0.335,$0.442,Yes,Summer Peak
+850,Electric usage,07/15/2024,20:30,20:45,1.017,Jul 2024,$0.335,$0.341,Yes,Summer Peak
+851,Electric usage,07/15/2024,20:45,21:00,0.798,Jul 2024,$0.335,$0.267,Yes,Summer Peak
+852,Electric usage,07/15/2024,21:00,21:15,1.383,Jul 2024,$0.335,$0.463,Yes,Summer Peak
+853,Electric usage,07/15/2024,21:15,21:30,1.524,Jul 2024,$0.335,$0.511,Yes,Summer Peak
+854,Electric usage,07/15/2024,21:30,21:45,1.284,Jul 2024,$0.335,$0.430,Yes,Summer Peak
+855,Electric usage,07/15/2024,21:45,22:00,1.116,Jul 2024,$0.335,$0.374,Yes,Summer Peak
+856,Electric usage,07/15/2024,22:00,22:15,1.044,Jul 2024,$0.335,$0.350,Yes,Summer Peak
+857,Electric usage,07/15/2024,22:15,22:30,1.08,Jul 2024,$0.335,$0.362,Yes,Summer Peak
+858,Electric usage,07/15/2024,22:30,22:45,1.032,Jul 2024,$0.335,$0.346,Yes,Summer Peak
+859,Electric usage,07/15/2024,22:45,23:00,1.077,Jul 2024,$0.335,$0.361,Yes,Summer Peak
+860,Electric usage,07/15/2024,23:00,23:15,0.99,Jul 2024,$0.335,$0.332,Yes,Summer Peak
+861,Electric usage,07/15/2024,23:15,23:30,1.038,Jul 2024,$0.335,$0.348,Yes,Summer Peak
+862,Electric usage,07/15/2024,23:30,23:45,0.972,Jul 2024,$0.335,$0.326,Yes,Summer Peak
+863,Electric usage,07/15/2024,23:45,00:00,0.948,Jul 2024,$0.335,$0.318,Yes,Summer Peak
+864,Electric usage,07/16/2024,00:00,00:15,0.993,Jul 2024,$0.335,$0.333,Yes,Non-Peak
+865,Electric usage,07/16/2024,00:15,00:30,0.978,Jul 2024,$0.335,$0.328,Yes,Non-Peak
+866,Electric usage,07/16/2024,00:30,00:45,0.975,Jul 2024,$0.335,$0.327,Yes,Non-Peak
+867,Electric usage,07/16/2024,00:45,01:00,1.032,Jul 2024,$0.335,$0.346,Yes,Non-Peak
+868,Electric usage,07/16/2024,01:00,01:15,0.96,Jul 2024,$0.335,$0.322,Yes,Non-Peak
+869,Electric usage,07/16/2024,01:15,01:30,0.969,Jul 2024,$0.335,$0.325,Yes,Non-Peak
+870,Electric usage,07/16/2024,01:30,01:45,0.897,Jul 2024,$0.335,$0.300,Yes,Non-Peak
+871,Electric usage,07/16/2024,01:45,02:00,0.894,Jul 2024,$0.335,$0.299,Yes,Non-Peak
+872,Electric usage,07/16/2024,02:00,02:15,0.897,Jul 2024,$0.335,$0.300,Yes,Non-Peak
+873,Electric usage,07/16/2024,02:15,02:30,0.918,Jul 2024,$0.335,$0.308,Yes,Non-Peak
+874,Electric usage,07/16/2024,02:30,02:45,0.897,Jul 2024,$0.335,$0.300,Yes,Non-Peak
+875,Electric usage,07/16/2024,02:45,03:00,0.306,Jul 2024,$0.335,$0.103,Yes,Non-Peak
+876,Electric usage,07/16/2024,03:00,03:15,0.231,Jul 2024,$0.335,$0.077,Yes,Non-Peak
+877,Electric usage,07/16/2024,03:15,03:30,0.252,Jul 2024,$0.335,$0.084,Yes,Non-Peak
+878,Electric usage,07/16/2024,03:30,03:45,0.399,Jul 2024,$0.335,$0.134,Yes,Non-Peak
+879,Electric usage,07/16/2024,03:45,04:00,0.84,Jul 2024,$0.335,$0.281,Yes,Non-Peak
+880,Electric usage,07/16/2024,04:00,04:15,0.831,Jul 2024,$0.335,$0.278,Yes,Non-Peak
+881,Electric usage,07/16/2024,04:15,04:30,0.834,Jul 2024,$0.335,$0.279,Yes,Non-Peak
+882,Electric usage,07/16/2024,04:30,04:45,0.801,Jul 2024,$0.335,$0.268,Yes,Non-Peak
+883,Electric usage,07/16/2024,04:45,05:00,0.27,Jul 2024,$0.335,$0.090,Yes,Non-Peak
+884,Electric usage,07/16/2024,05:00,05:15,0.219,Jul 2024,$0.335,$0.073,Yes,Non-Peak
+885,Electric usage,07/16/2024,05:15,05:30,0.243,Jul 2024,$0.335,$0.081,Yes,Non-Peak
+886,Electric usage,07/16/2024,05:30,05:45,0.234,Jul 2024,$0.335,$0.078,Yes,Non-Peak
+887,Electric usage,07/16/2024,05:45,06:00,0.42,Jul 2024,$0.335,$0.141,Yes,Non-Peak
+888,Electric usage,07/16/2024,06:00,06:15,0.843,Jul 2024,$0.335,$0.282,Yes,Non-Peak
+889,Electric usage,07/16/2024,06:15,06:30,0.846,Jul 2024,$0.335,$0.283,Yes,Non-Peak
+890,Electric usage,07/16/2024,06:30,06:45,0.378,Jul 2024,$0.335,$0.127,Yes,Non-Peak
+891,Electric usage,07/16/2024,06:45,07:00,0.396,Jul 2024,$0.335,$0.133,Yes,Non-Peak
+892,Electric usage,07/16/2024,07:00,07:15,0.378,Jul 2024,$0.335,$0.127,Yes,Non-Peak
+893,Electric usage,07/16/2024,07:15,07:30,0.399,Jul 2024,$0.335,$0.134,Yes,Non-Peak
+894,Electric usage,07/16/2024,07:30,07:45,0.444,Jul 2024,$0.335,$0.149,Yes,Non-Peak
+895,Electric usage,07/16/2024,07:45,08:00,0.642,Jul 2024,$0.335,$0.215,Yes,Non-Peak
+896,Electric usage,07/16/2024,08:00,08:15,1.212,Jul 2024,$0.335,$0.406,Yes,Summer Peak
+897,Electric usage,07/16/2024,08:15,08:30,0.954,Jul 2024,$0.335,$0.320,Yes,Summer Peak
+898,Electric usage,07/16/2024,08:30,08:45,1.152,Jul 2024,$0.335,$0.386,Yes,Summer Peak
+899,Electric usage,07/16/2024,08:45,09:00,1.035,Jul 2024,$0.335,$0.347,Yes,Summer Peak
+900,Electric usage,07/16/2024,09:00,09:15,0.957,Jul 2024,$0.335,$0.321,Yes,Summer Peak
+901,Electric usage,07/16/2024,09:15,09:30,0.555,Jul 2024,$0.335,$0.186,Yes,Summer Peak
+902,Electric usage,07/16/2024,09:30,09:45,0.513,Jul 2024,$0.335,$0.172,Yes,Summer Peak
+903,Electric usage,07/16/2024,09:45,10:00,0.522,Jul 2024,$0.335,$0.175,Yes,Summer Peak
+904,Electric usage,07/16/2024,10:00,10:15,0.603,Jul 2024,$0.335,$0.202,Yes,Summer Peak
+905,Electric usage,07/16/2024,10:15,10:30,0.483,Jul 2024,$0.335,$0.162,Yes,Summer Peak
+906,Electric usage,07/16/2024,10:30,10:45,0.501,Jul 2024,$0.335,$0.168,Yes,Summer Peak
+907,Electric usage,07/16/2024,10:45,11:00,0.513,Jul 2024,$0.335,$0.172,Yes,Summer Peak
+908,Electric usage,07/16/2024,11:00,11:15,0.525,Jul 2024,$0.335,$0.176,Yes,Summer Peak
+909,Electric usage,07/16/2024,11:15,11:30,0.942,Jul 2024,$0.335,$0.316,Yes,Summer Peak
+910,Electric usage,07/16/2024,11:30,11:45,1.035,Jul 2024,$0.335,$0.347,Yes,Summer Peak
+911,Electric usage,07/16/2024,11:45,12:00,1.101,Jul 2024,$0.335,$0.369,Yes,Summer Peak
+912,Electric usage,07/16/2024,12:00,12:15,1.077,Jul 2024,$0.335,$0.361,Yes,Summer Peak
+913,Electric usage,07/16/2024,12:15,12:30,1.074,Jul 2024,$0.335,$0.360,Yes,Summer Peak
+914,Electric usage,07/16/2024,12:30,12:45,1.02,Jul 2024,$0.335,$0.342,Yes,Summer Peak
+915,Electric usage,07/16/2024,12:45,13:00,0.462,Jul 2024,$0.335,$0.155,Yes,Summer Peak
+916,Electric usage,07/16/2024,13:00,13:15,0.435,Jul 2024,$0.335,$0.146,Yes,Summer Peak
+917,Electric usage,07/16/2024,13:15,13:30,0.453,Jul 2024,$0.335,$0.152,Yes,Summer Peak
+918,Electric usage,07/16/2024,13:30,13:45,0.417,Jul 2024,$0.335,$0.140,Yes,Summer Peak
+919,Electric usage,07/16/2024,13:45,14:00,0.411,Jul 2024,$0.335,$0.138,Yes,Summer Peak
+920,Electric usage,07/16/2024,14:00,14:15,0.435,Jul 2024,$0.335,$0.146,Yes,Super Peak
+921,Electric usage,07/16/2024,14:15,14:30,0.447,Jul 2024,$0.335,$0.150,Yes,Super Peak
+922,Electric usage,07/16/2024,14:30,14:45,0.438,Jul 2024,$0.335,$0.147,Yes,Super Peak
+923,Electric usage,07/16/2024,14:45,15:00,0.813,Jul 2024,$0.335,$0.272,Yes,Super Peak
+924,Electric usage,07/16/2024,15:00,15:15,1.296,Jul 2024,$0.335,$0.434,Yes,Super Peak
+925,Electric usage,07/16/2024,15:15,15:30,1.329,Jul 2024,$0.335,$0.445,Yes,Super Peak
+926,Electric usage,07/16/2024,15:30,15:45,1.32,Jul 2024,$0.335,$0.442,Yes,Super Peak
+927,Electric usage,07/16/2024,15:45,16:00,1.296,Jul 2024,$0.335,$0.434,Yes,Super Peak
+928,Electric usage,07/16/2024,16:00,16:15,0.435,Jul 2024,$0.335,$0.146,Yes,Super Peak
+929,Electric usage,07/16/2024,16:15,16:30,0.468,Jul 2024,$0.335,$0.157,Yes,Super Peak
+930,Electric usage,07/16/2024,16:30,16:45,0.489,Jul 2024,$0.335,$0.164,Yes,Super Peak
+931,Electric usage,07/16/2024,16:45,17:00,1.233,Jul 2024,$0.335,$0.413,Yes,Super Peak
+932,Electric usage,07/16/2024,17:00,17:15,1.323,Jul 2024,$0.335,$0.443,Yes,Super Peak
+933,Electric usage,07/16/2024,17:15,17:30,1.359,Jul 2024,$0.335,$0.455,Yes,Super Peak
+934,Electric usage,07/16/2024,17:30,17:45,1.338,Jul 2024,$0.335,$0.448,Yes,Super Peak
+935,Electric usage,07/16/2024,17:45,18:00,1.341,Jul 2024,$0.335,$0.449,Yes,Super Peak
+936,Electric usage,07/16/2024,18:00,18:15,1.329,Jul 2024,$0.335,$0.445,Yes,Summer Peak
+937,Electric usage,07/16/2024,18:15,18:30,1.323,Jul 2024,$0.335,$0.443,Yes,Summer Peak
+938,Electric usage,07/16/2024,18:30,18:45,1.323,Jul 2024,$0.335,$0.443,Yes,Summer Peak
+939,Electric usage,07/16/2024,18:45,19:00,1.251,Jul 2024,$0.335,$0.419,Yes,Summer Peak
+940,Electric usage,07/16/2024,19:00,19:15,0.681,Jul 2024,$0.335,$0.228,Yes,Summer Peak
+941,Electric usage,07/16/2024,19:15,19:30,0.657,Jul 2024,$0.335,$0.220,Yes,Summer Peak
+942,Electric usage,07/16/2024,19:30,19:45,1.311,Jul 2024,$0.335,$0.439,Yes,Summer Peak
+943,Electric usage,07/16/2024,19:45,20:00,1.374,Jul 2024,$0.335,$0.460,Yes,Summer Peak
+944,Electric usage,07/16/2024,20:00,20:15,1.32,Jul 2024,$0.335,$0.442,Yes,Summer Peak
+945,Electric usage,07/16/2024,20:15,20:30,1.524,Jul 2024,$0.335,$0.511,Yes,Summer Peak
+946,Electric usage,07/16/2024,20:30,20:45,0.918,Jul 2024,$0.335,$0.308,Yes,Summer Peak
+947,Electric usage,07/16/2024,20:45,21:00,0.552,Jul 2024,$0.335,$0.185,Yes,Summer Peak
+948,Electric usage,07/16/2024,21:00,21:15,1.122,Jul 2024,$0.335,$0.376,Yes,Summer Peak
+949,Electric usage,07/16/2024,21:15,21:30,1.323,Jul 2024,$0.335,$0.443,Yes,Summer Peak
+950,Electric usage,07/16/2024,21:30,21:45,0.798,Jul 2024,$0.335,$0.267,Yes,Summer Peak
+951,Electric usage,07/16/2024,21:45,22:00,1.353,Jul 2024,$0.335,$0.453,Yes,Summer Peak
+952,Electric usage,07/16/2024,22:00,22:15,1.251,Jul 2024,$0.335,$0.419,Yes,Summer Peak
+953,Electric usage,07/16/2024,22:15,22:30,1.239,Jul 2024,$0.335,$0.415,Yes,Summer Peak
+954,Electric usage,07/16/2024,22:30,22:45,1.311,Jul 2024,$0.335,$0.439,Yes,Summer Peak
+955,Electric usage,07/16/2024,22:45,23:00,1.218,Jul 2024,$0.335,$0.408,Yes,Summer Peak
+956,Electric usage,07/16/2024,23:00,23:15,1.359,Jul 2024,$0.335,$0.455,Yes,Summer Peak
+957,Electric usage,07/16/2024,23:15,23:30,1.389,Jul 2024,$0.335,$0.465,Yes,Summer Peak
+958,Electric usage,07/16/2024,23:30,23:45,1.206,Jul 2024,$0.335,$0.404,Yes,Summer Peak
+959,Electric usage,07/16/2024,23:45,00:00,1.032,Jul 2024,$0.335,$0.346,Yes,Summer Peak

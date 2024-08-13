@@ -1,0 +1,42 @@
+﻿
+Name,ZACHARY VAUGHAN
+Address,"86 WALWORTH AVE, SCARSDALE NY 10583"
+Account Number,001126621949261
+Service,Service 1
+
+TYPE,START DATE,END DATE,USAGE (therms),COST,NOTES
+Natural gas billing,2021-01-16,2021-02-17,7.00,$40.99
+Natural gas billing,2021-02-18,2021-03-17,7.00,$38.06
+Natural gas billing,2021-03-19,2021-04-16,27.00,$80.63
+Natural gas billing,2021-04-17,2021-05-14,39.00,$103.75
+Natural gas billing,2021-05-15,2021-06-15,29.00,$86.03
+Natural gas billing,2021-06-16,2021-07-15,25.00,$78.81
+Natural gas billing,2021-07-16,2021-08-13,39.00,$113.19
+Natural gas billing,2021-08-14,2021-09-14,27.00,$89.03
+Natural gas billing,2021-09-15,2021-10-14,26.00,$86.00
+Natural gas billing,2021-10-15,2021-11-12,30.00,$95.83
+Natural gas billing,2021-11-13,2021-12-15,25.00,$86.73
+Natural gas billing,2021-12-16,2022-01-14,37.00,$117.52
+Natural gas billing,2022-01-15,2022-02-15,31.00,$106.42
+Natural gas billing,2022-02-16,2022-03-16,34.00,$111.77
+Natural gas billing,2022-03-18,2022-04-15,33.00,$111.43
+Natural gas billing,2022-04-16,2022-05-16,30.00,$111.59
+Natural gas billing,2022-05-17,2022-06-15,32.00,$121.78
+Natural gas billing,2022-06-16,2022-07-15,17.00,$76.11
+Natural gas billing,2022-07-16,2022-08-15,6.00,$43.78
+Natural gas billing,2022-08-16,2022-09-14,5.00,$40.47
+Natural gas billing,2022-09-15,2022-10-14,4.00,$37.01
+Natural gas billing,2022-10-15,2022-12-15,7.00,$70.57
+Natural gas billing,2022-12-16,2023-01-17,5.00,$40.83
+Natural gas billing,2023-01-18,2023-02-15,"4,591.00","$1,288.35"
+Natural gas billing,2023-02-16,2023-03-16,5.00,$39.35
+Natural gas billing,2023-03-18,2023-04-17,4.00,$36.45
+Natural gas billing,2023-04-18,2023-05-15,4.00,$33.38
+Natural gas billing,2023-05-16,2023-06-14,4.00,$34.50
+Natural gas billing,2023-06-15,2023-07-14,4.00,$34.72
+Natural gas billing,2023-07-15,2023-08-14,3.00,$34.55
+Natural gas billing,2023-08-15,2023-09-13,2.00,$34.37
+Natural gas billing,2023-09-14,2023-10-12,4.00,$36.49
+Natural gas billing,2023-10-13,2023-11-09,3.00,$33.24
+Natural gas billing,2023-11-10,2023-12-13,3.00,$39.80
+Natural gas billing,2023-12-14,2024-01-12,4.00,$39.01
