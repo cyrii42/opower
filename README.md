@@ -25,6 +25,7 @@ Supported utilities (in alphabetical order):
   - Delmarva Power
   - PECO Energy Company (PECO)
   - Potomac Electric Power Company (Pepco)
+- Mercury NZ Limited
 - Pacific Gas & Electric (PG&E)
 - Portland General Electric (PGE)
 - Puget Sound Energy (PSE)
@@ -47,10 +48,6 @@ Since this library is used by Home Assistant, see <https://www.home-assistant.io
 
 So follow that advice and try to scrape all fields at once, similar to the `get_form_action_url_and_hidden_inputs` in helpers.py.
 
-## Example
-
-See [demo.py](https://github.com/tronikos/opower/blob/main/src/demo.py)
-
 ## Development environment
 
 ```sh
@@ -72,16 +69,16 @@ pre-commit run --all-files
 
 # Alternative: run formatter, lint, and type checking
 python -m pip install isort black flake8 ruff mypy
-isort . ; black . ; flake8 . ; ruff . --fix ; mypy --install-types .
+isort . ; black . ; flake8 . ; ruff check . --fix ; mypy --install-types .
 
 # Run tests
 python -m pip install pytest python-dotenv
 pytest
 
-# Run demo
-python src/demo.py --help
+# Run command line
+python -m opower --help
 # To output debug logs and API responses to a file run:
-python src/demo.py -vv 2> out.txt
+python -m opower -vv 2> out.txt
 
 # Build package
 python -m pip install build

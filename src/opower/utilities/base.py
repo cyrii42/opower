@@ -1,6 +1,5 @@
 """Base class that each utility needs to extend."""
 
-
 from typing import Any, Optional
 
 import aiohttp
@@ -43,6 +42,11 @@ class UtilityBase:
     def is_dss() -> bool:
         """Check if Utility using DSS version of the portal."""
         return False
+
+    @classmethod
+    def utilitycode(cls) -> str:
+        """Return the utilitycode identifier for the utility."""
+        return cls.subdomain()
 
     @staticmethod
     async def async_login(

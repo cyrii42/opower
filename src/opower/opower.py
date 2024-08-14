@@ -10,6 +10,7 @@ from urllib.parse import urlencode
 
 import aiohttp
 from aiohttp.client_exceptions import ClientResponseError
+import aiozoneinfo
 import arrow
 
 from .const import USER_AGENT
@@ -48,10 +49,8 @@ class AggregateType(Enum):
     BILL = "bill"
     DAY = "day"
     HOUR = "hour"
+    HALF_HOUR = "half_hour"
     QUARTER_HOUR = "quarter_hour"
-    # HALF_HOUR and QUARTER_HOUR are intentionally omitted.  *** re-added by ZMV ***
-    # Home Assistant only has hourly data in the energy dashboard and
-    # some utilities (e.g. PG&E) claim QUARTER_HOUR but they only provide HOUR.
 
     def __str__(self) -> str:
         """Return the value of the enum."""
@@ -80,12 +79,14 @@ SUPPORTED_AGGREGATE_TYPES = {
         AggregateType.BILL,
         AggregateType.DAY,
         AggregateType.HOUR,
+        AggregateType.HALF_HOUR,
     ],
     ReadResolution.QUARTER_HOUR: [
         AggregateType.BILL,
         AggregateType.DAY,
         AggregateType.HOUR,
-        AggregateType.QUARTER_HOUR  ### added by ZMV 10/17/23
+        AggregateType.HALF_HOUR,
+        AggregateType.QUARTER_HOUR,
     ],
 }
 
@@ -104,6 +105,9 @@ class Account:
     customer: Customer
     uuid: str
     utility_account_id: str
+    # utility_account_id if unique or uuid
+    # https://github.com/home-assistant/core/issues/108260
+    id: str
     meter_type: MeterType
     read_resolution: Optional[ReadResolution]
 
@@ -209,12 +213,25 @@ class Opower:
         """
         accounts = []
         for customer in await self._async_get_customers():
+            utility_accounts = []
+            utility_account_ids = []
             for account in customer["utilityAccounts"]:
+                utility_accounts.append(account)
+                utility_account_ids.append(account["preferredUtilityAccountId"])
+            for account in utility_accounts:
+                utility_account_id = account["preferredUtilityAccountId"]
+                account_uuid = account["uuid"]
+                id = (
+                    utility_account_id
+                    if utility_account_ids.count(utility_account_id) == 1
+                    else account_uuid
+                )
                 accounts.append(
                     Account(
                         customer=Customer(uuid=customer["uuid"]),
-                        uuid=account["uuid"],
-                        utility_account_id=account["preferredUtilityAccountId"],
+                        uuid=account_uuid,
+                        utility_account_id=utility_account_id,
+                        id=id,
                         meter_type=MeterType(account["meterType"]),
                         read_resolution=ReadResolution(account["readResolution"]),
                     )
@@ -230,15 +247,9 @@ class Opower:
         for customer in await self._async_get_customers():
             customer_uuid = customer["uuid"]
             url = (
-                "https://"
-                f"{self._get_subdomain()}"
-                ".opower.com/"
-                f"{self._get_api_root()}"
-                "/edge/apis/bill-forecast-cws-v1/cws/"
-                f"{self.utility.subdomain()}"
-                "/customers/"
-                f"{customer_uuid}"
-                "/combined-forecast"
+                f"https://{self._get_subdomain()}.opower.com/{self._get_api_root()}"
+                f"/edge/apis/bill-forecast-cws-v1/cws/{self.utility.utilitycode()}"
+                f"/customers/{customer_uuid}/combined-forecast"
             )
             _LOGGER.debug("Fetching: %s", url)
             try:
@@ -265,15 +276,28 @@ class Opower:
                     result["totalMetadata"],
                 )
                 continue
+            account_forecasts = []
+            utility_account_ids = []
             for forecast in result["accountForecasts"]:
+                account_forecasts.append(forecast)
+                utility_account_ids.append(str(forecast["preferredUtilityAccountId"]))
+            for forecast in account_forecasts:
+                utility_account_id = str(forecast["preferredUtilityAccountId"])
+                if not forecast["accountUuids"]:
+                    continue
+                account_uuid = forecast["accountUuids"][0]
+                id = (
+                    utility_account_id
+                    if utility_account_ids.count(utility_account_id) == 1
+                    else account_uuid
+                )
                 forecasts.append(
                     Forecast(
                         account=Account(
                             customer=Customer(uuid=customer["uuid"]),
-                            uuid=forecast["accountUuids"][0],
-                            utility_account_id=str(
-                                forecast["preferredUtilityAccountId"]
-                            ),
+                            uuid=account_uuid,
+                            utility_account_id=utility_account_id,
+                            id=id,
                             meter_type=MeterType(forecast["meterType"]),
                             read_resolution=None,
                         ),
@@ -299,12 +323,8 @@ class Opower:
                 await self._async_get_user_accounts()
 
             url = (
-                "https://"
-                f"{self._get_subdomain()}"
-                ".opower.com/"
-                f"{self._get_api_root()}"
-                "/edge/apis/multi-account-v1/cws/"
-                f"{self.utility.subdomain()}"
+                f"https://{self._get_subdomain()}.opower.com/{self._get_api_root()}"
+                f"/edge/apis/multi-account-v1/cws/{self.utility.utilitycode()}"
                 "/customers?offset=0&batchSize=100&addressFilter="
             )
             _LOGGER.debug("Fetching: %s", url)
@@ -443,14 +463,19 @@ class Opower:
         if end_date is None:
             raise ValueError("end_date is required unless aggregate_type=BILL")
 
-        start = arrow.get(start_date.date(), self.utility.timezone())
-        end = arrow.get(end_date.date(), self.utility.timezone()).shift(days=1)
+        tzinfo = await aiozoneinfo.async_get_time_zone(self.utility.timezone())
+        start = arrow.get(start_date.date(), tzinfo)
+        end = arrow.get(end_date.date(), tzinfo).shift(days=1)
 
         max_request_days = None
         if aggregate_type == AggregateType.DAY:
             max_request_days = 363
         elif aggregate_type == AggregateType.HOUR:
             max_request_days = 26
+        elif aggregate_type == AggregateType.HALF_HOUR:
+            max_request_days = 6
+        elif aggregate_type == AggregateType.QUARTER_HOUR:
+            max_request_days = 6
 
         # Fetch data in batches in reverse chronological order
         # until we reach start or there is no fetched data
@@ -481,24 +506,14 @@ class Opower:
     ) -> list[Any]:
         if usage_only:
             url = (
-                "https://"
-                f"{self._get_subdomain()}"
-                ".opower.com/"
-                f"{self._get_api_root()}"
-                "/edge/apis/DataBrowser-v1/cws/utilities/"
-                f"{self.utility.subdomain()}"
-                "/utilityAccounts/"
-                f"{account.uuid}"
-                "/reads"
+                f"https://{self._get_subdomain()}.opower.com/{self._get_api_root()}"
+                f"/edge/apis/DataBrowser-v1/cws/utilities/{self.utility.utilitycode()}"
+                f"/utilityAccounts/{account.uuid}/reads"
             )
         else:
             url = (
-                "https://"
-                f"{self._get_subdomain()}"
-                ".opower.com/"
-                f"{self._get_api_root()}"
-                "/edge/apis/DataBrowser-v1/cws/cost/utilityAccount/"
-                f"{account.uuid}"
+                f"https://{self._get_subdomain()}.opower.com/{self._get_api_root()}"
+                f"/edge/apis/DataBrowser-v1/cws/cost/utilityAccount/{account.uuid}"
             )
         convert_to_date = usage_only
         params = {"aggregateType": aggregate_type.value}
