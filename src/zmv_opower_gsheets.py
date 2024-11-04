@@ -341,10 +341,10 @@ class ConEdUsage():
 
         energy_list = [Cell(row_num, 18, 
             f"=SUMIFS('Electric Usage'!E:E, 'Electric Usage'!B:B, \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
-                for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
+                for row_num in range(2, 71) if row_num not in [21, 22, 29, 30, 43, 44, 57, 58]]
         price_list = [Cell(row_num, 26, 
             f"=AVERAGEIFS('Electric Usage'!G:G, 'Electric Usage'!B:B, \">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})")
-                for row_num in range(2, 57) if row_num not in [21, 22, 29, 30, 43, 44]]
+                for row_num in range(2, 71) if row_num not in [21, 22, 29, 30, 43, 44, 57, 58]]
         
         combined_list = energy_list + price_list
 
