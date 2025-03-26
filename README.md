@@ -12,6 +12,8 @@ Supported utilities (in alphabetical order):
   - Kentucky Power
   - Public Service Company of Oklahoma (PSO)
   - Southwestern Electric Power Company (SWEPCO)
+- Arizona Public Service (APS)
+- Burbank Water and Power (BWP)
 - City of Austin Utilities
 - Consolidated Edison (ConEd)
   - Orange & Rockland Utilities (ORU)
@@ -26,6 +28,7 @@ Supported utilities (in alphabetical order):
   - PECO Energy Company (PECO)
   - Potomac Electric Power Company (Pepco)
 - Mercury NZ Limited
+- National Grid NY Upstate
 - Pacific Gas & Electric (PG&E)
 - Portland General Electric (PGE)
 - Puget Sound Energy (PSE)
