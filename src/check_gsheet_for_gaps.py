@@ -124,7 +124,7 @@ from zmv_opower_gsheets import ConEdUsage
 def main() -> None:
     usage = ConEdUsage()
 
-    usage.check_gsheet_for_gaps(weeks_to_check=6)
+    usage.check_gsheet_for_gaps()
 
     # gaps_df = pd.read_csv('df_opower_2024_07_22-14_11_08.csv')
     # usage.append_new_opower_rows_to_gsheet(gaps_df)

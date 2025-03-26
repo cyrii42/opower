@@ -69,3 +69,6 @@ async def get_opower_electric_data_custom_dates(start_date: datetime, end_date: 
             df['type'] = account.meter_type
 
     return df
+
+if __name__ == '__main__':
+    ...
