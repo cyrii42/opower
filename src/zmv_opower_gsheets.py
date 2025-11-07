@@ -9,7 +9,7 @@ from gspread_formatting import CellFormat, Color, batch_updater
 from gspread_pandas import Spread
 import pandas as pd
 
-from zmv_const import CONED_SPREADSHEET, EASTERN_TIME
+from zmv_const import CONED_SPREADSHEET, EASTERN_TIME, DATA_DIR
 import zmv_opower as opower
 
 WEEKS_TO_CHECK = 4
@@ -115,7 +115,7 @@ class ConEdUsage():
         if df_gaps is not None:
             print(f"\nFound {df_gaps.shape[0]} gaps:")
             print(df_gaps)
-            df_gaps.to_csv(f"df_opower_gaps_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv", index=False)
+            df_gaps.to_csv(DATA_DIR / f"df_opower_gaps_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv", index=False)
 
             if input("\nAttempt to fill the gaps from Con Edison data? ") in ['Y', 'y', 'yes', 'Yes', 'YES']:
                 print("Attempting now...")
@@ -124,7 +124,7 @@ class ConEdUsage():
                 print(df_opower)
 
                 if input("\nSave CSV file to disk? ") in ['Y', 'y', 'yes', 'Yes', 'YES']:
-                    csv_filename = f"df_opower_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv"
+                    csv_filename = DATA_DIR / f"df_opower_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv"
                     print(f"Saving data as {csv_filename}...")
                     df_opower.to_csv(csv_filename, index=False)
                 else:
@@ -194,7 +194,7 @@ class ConEdUsage():
 
         df = self.df_usage
 
-        backup_csv_filename = f"df_opower_BACKUP_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv"
+        backup_csv_filename = DATA_DIR / f"df_opower_BACKUP_{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.csv"
         print(f"Saving backup of Google Sheets electric-usage data as {backup_csv_filename}...")
         df.to_csv(backup_csv_filename, index=False)
 
@@ -331,7 +331,7 @@ class ConEdUsage():
 
         df = df.sort_values(by=['dt_start']).drop_duplicates(subset=['dt_start'], ignore_index=True)
         df = df.drop(columns=['dt_start', 'dt_start_str'])
-        df = df.reindex(columns=['Type', 'Date', 'Start', 'End', 'Usage', 'Month', 
+        df = df.reindex(columns=['Type', 'Date', 'Start', 'End', 'Usage', 'Month',
                                  'Price/kWh', 'Cost/15min', 'Summer?', 'Period']) # 'Unit
 
         if df.shape[0] > 0:
@@ -346,10 +346,10 @@ class ConEdUsage():
             print("\nUnable to fill gap using Con Edison data.  Exiting now.")
 
     def fix_sealed_invoices_worksheet(self) -> None:
-        ''' Re-populates the "Actual Total Energy Used" and "Con Ed $ per kWh" fields of the 
-        "Sealed Invoices" worksheet on Google Sheets.  
+        ''' Re-populates the "Actual Total Energy Used" and "Con Ed $ per kWh" fields of the
+        "Sealed Invoices" worksheet on Google Sheets.
 
-        Excel formula for "Actual Total Energy Used": `=SUMIFS('Electric Usage'!E:E, 
+        Excel formula for "Actual Total Energy Used": `=SUMIFS('Electric Usage'!E:E,
         'Electric Usage'!B:B,\">=\"&A{row_num},'Electric Usage'!B:B,\"<=\"&B{row_num})`
 
         Excel formula for "Con Ed $ per kWh": `=AVERAGEIFS('Electric Usage'!G:G,
@@ -397,7 +397,7 @@ class ConEdUsage():
                                          'COST', 'MONTH', 'kWh/DAY', '$/kWh', '$/DAY'])
 
         print(df_csv)
-        self.spread.df_to_sheet(df_csv, sheet=BILLS_WORKSHEET, replace=False, 
+        self.spread.df_to_sheet(df_csv, sheet=BILLS_WORKSHEET, replace=False,
                                 index=False, headers=False, start=(starting_row, 1))
 
 
