@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from dotenv import load_dotenv
@@ -6,6 +7,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 EASTERN_TIME = ZoneInfo("America/New_York")
+
+ROOT_DIR = Path(__file__).parent.parent  # ROOT/src/opower/zmv_const.py
+DATA_DIR = ROOT_DIR / 'data'
 
 # InfluxDB setup
 INFLUX_URL = os.getenv("INFLUX_URL", "") 
