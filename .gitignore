@@ -1,19 +1,17 @@
 **/*DS_Store
-# headers.txt
-# headers_pipes.txt
-# **/*.env*
-# **/*.csv
-# **/jaffe*.*
-# **/tuc*.*
-# **/csv_files
-# **/data
-# **/*.db
-# **/*.xls
-# **/*.xlsx
-# **/*.png
-# **/*.jpg
-# **/*.bmp
-# **/*.pdf
+**/*.env*
+**/*.csv
+**/jaffe*.*
+**/tuc*.*
+**/csv_files
+**/data
+**/*.db
+**/*.xls
+**/*.xlsx
+**/*.png
+**/*.jpg
+**/*.bmp
+**/*.pdf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
