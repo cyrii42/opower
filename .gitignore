@@ -12,6 +12,7 @@
 **/*.jpg
 **/*.bmp
 **/*.pdf
+**/random_tests.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
