@@ -7,14 +7,15 @@ import aiohttp
 import pandas as pd
 
 from opower import AggregateType, MeterType, Opower
-import zmv_const as const
+from zmv_const import CONED_UTILITY_NAME, CONED_USERNAME, CONED_PASSWORD, CONED_MFA_SECRET
 
 
 async def get_opower_electric_data(num_days: int = 7) -> pd.DataFrame:
-    utility = const.CONED_UTILITY_NAME
-    username = const.CONED_USERNAME
-    password = const.CONED_PASSWORD
-    mfa_secret = const.CONED_MFA_SECRET
+    utility = CONED_UTILITY_NAME
+    username = CONED_USERNAME
+    password = CONED_PASSWORD
+    mfa_secret = CONED_MFA_SECRET
+    aggregate_type = AggregateType.HALF_HOUR
     start_date = (datetime.now() - timedelta(days=num_days))
     end_date = datetime.now()
 
@@ -41,10 +42,11 @@ async def get_opower_electric_data(num_days: int = 7) -> pd.DataFrame:
     return df
 
 async def get_opower_electric_data_custom_dates(start_date: datetime, end_date: datetime) -> pd.DataFrame:
-    utility = const.CONED_UTILITY_NAME
-    username = const.CONED_USERNAME
-    password = const.CONED_PASSWORD
-    mfa_secret = const.CONED_MFA_SECRET
+    utility = CONED_UTILITY_NAME
+    username = CONED_USERNAME
+    password = CONED_PASSWORD
+    mfa_secret = CONED_MFA_SECRET
+    aggregate_type = AggregateType.HALF_HOUR
     start_date = start_date
     end_date = end_date
 
